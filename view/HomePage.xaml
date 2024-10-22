@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="QQBotCodePlugin.view.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:QQBotCodePlugin.view"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="58,0,20,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock x:Name="Time" FontSize="25" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="message" FontSize="15" FontWeight="Medium" Text="好像没有什么可以说的"></TextBlock>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Button x:Name="StartBot" Click="StartBot_Click" Style="{StaticResource AccentButtonStyle}" Content="启动QQ机器人" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,40" MinHeight="55" MinWidth="210"></Button>
+        </Grid>
+    </Grid>
+</Page>
