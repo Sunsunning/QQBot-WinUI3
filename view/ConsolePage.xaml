@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="QQBotCodePlugin.view.ConsolePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:QQBotCodePlugin.view"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    NavigationCacheMode="Enabled">
+    <Grid Margin="58,0,20,10" RowSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ScrollViewer x:Name="scroll" Grid.Column="0" MinHeight="355">
+                <StackPanel x:Name="LogStackPanel">
+                    <!--<RichEditBox x:Name="data" PlaceholderText="暂无数据" IsReadOnly="True" MinHeight="355"></RichEditBox>-->
+                </StackPanel>
+            </ScrollViewer>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <AutoSuggestBox x:Name="Command" PlaceholderText="输入你的内容" Grid.Column="0" PreviewKeyDown="Command_KeyDown" TextChanged="Command_TextChanged" SuggestionChosen="Command_SuggestionChosen"></AutoSuggestBox>
+            <Button x:Name="send" Content="发送" Click="send_Click"  Margin="5,0,0,0" Grid.Column="1" Style="{StaticResource AccentButtonStyle}"></Button>
+        </Grid>
+    </Grid>
+</Page>

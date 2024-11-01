@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "QQBotCodePlugin (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "QQBotCodePlugin (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
