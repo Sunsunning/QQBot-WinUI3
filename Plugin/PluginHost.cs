@@ -12,9 +12,9 @@ namespace QQBotCodePlugin.Plugin
 {
     public class PluginHost
     {
-        private ILoggerService loggerService;
         private readonly Logger logger;
         private readonly Bot bot;
+        private ILoggerService loggerService;
         private List<IPlugin> plugins = new List<IPlugin>();
 
         public PluginHost(Logger logger, Bot bot)
@@ -24,22 +24,31 @@ namespace QQBotCodePlugin.Plugin
             this.logger = logger;
             logger.Info("Loading Plugins……");
             bot.GroupReceived += Bot_GroupReceived;
+            bot.PrivateReceived += Bot_PrivateReceived;
         }
 
         public List<IPlugin> GetPlugins() => plugins;
+
+        private void Bot_PrivateReceived(object sender, MessageEvent e)
+        {
+            foreach (var plugin in plugins)
+            {
+                plugin.PrivateMessageReceived(e);
+            }
+        }
 
         private void Bot_GroupReceived(object sender, MessageEvent e)
         {
             foreach (var plugin in plugins)
             {
-                plugin.Execute(e);
+                plugin.GroupMessageReceived(e);
             }
         }
 
         public void RegisterPlugin(IPlugin plugin)
         {
             Debug.WriteLine($"register {plugin}");
-            plugin.SetHostService(loggerService, bot.Service, bot.configService);
+            plugin.SetHostService(loggerService, bot.Service, bot.configService, bot.serviceAddress);
             plugin.OnEnable();
             plugins.Add(plugin);
         }

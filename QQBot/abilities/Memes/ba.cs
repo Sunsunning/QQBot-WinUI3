@@ -41,7 +41,7 @@ namespace QQBotCodePlugin.QQBot.abilities.Memes
             string[] parts = message.Split(' ');
             if (parts.Length != 3)
             {
-                await bot.Message.sendImageMessage(@event.GroupId, @event.MessageId, "用法:/ba [左侧字符] [右侧字符]", sendToConsole: false);
+                await bot.Message.sendMessage(@event.GroupId, @event.MessageId, "用法:/ba [左侧字符] [右侧字符]", sendToConsole: false);
                 return;
             }
             await bot.Message.sendImageMessage(@event.GroupId, @event.MessageId, $"https://meme.yuki.sh/api/bluearchive?left={parts[1]}&right={parts[2]}", sendToConsole: false);

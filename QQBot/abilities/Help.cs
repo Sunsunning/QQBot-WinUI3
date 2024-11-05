@@ -33,7 +33,7 @@ namespace QQBotCodePlugin.QQBot.abilities
             {
                 return;
             }
-            if (!(message.StartsWith("/help") || message.StartsWith("/帮助") || message.StartsWith("/?") || message.StartsWith("/？")))
+            if (!(message.Equals("/help") || message.Equals("/帮助") || message.Equals("/?") || message.Equals("/？")))
             {
                 return;
             }
@@ -47,7 +47,7 @@ namespace QQBotCodePlugin.QQBot.abilities
                     for (int i = 0; i < cmds.Count; i++)
                     {
                         int p_4145_ = i;
-                        commands.Add($"{p_4145_+1}.{cmds[i]}");
+                        commands.Add($"{p_4145_ + 1}.{cmds[i]}");
                     }
                 }
                 if (bot.loadPlugin)

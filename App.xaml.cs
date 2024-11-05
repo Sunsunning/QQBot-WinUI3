@@ -79,7 +79,7 @@ namespace QQBotCodePlugin
         }
 
         public static Window GetMainWindow() => m_window;
-        private List<string> folders = new List<string>() { "Bots", "Custom" };
+        private List<string> folders = new List<string>() { "Bots" };
         private List<string> files = new List<string>();
         private SettingManager manager = new SettingManager();
         private static Window m_window;

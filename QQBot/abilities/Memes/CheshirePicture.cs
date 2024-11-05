@@ -29,7 +29,7 @@ namespace QQBotCodePlugin.QQBot.abilities.Memes
             {
                 return;
             }
-            if (!message.StartsWith("/随机柴郡"))
+            if (!message.Equals("/随机柴郡"))
             {
                 return;
             }

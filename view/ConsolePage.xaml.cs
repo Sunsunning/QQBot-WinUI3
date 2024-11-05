@@ -24,7 +24,6 @@ namespace QQBotCodePlugin.view
         public ConsolePage()
         {
             this.InitializeComponent();
-            HomePage.RunQQbotRequested += HomePage_RunQQbotRequested;
             BotListPage.RunQQbotRequested += HomePage_RunQQbotRequested;
             _dialog = new Dialog();
         }

@@ -37,7 +37,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
                         ["type"] = "text",
                         ["data"] = new JObject
                         {
-                            ["text"] = message + "\n"
+                            ["text"] = message
                         }
                         }
                     }
@@ -70,7 +70,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
                         ["type"] = "text",
                         ["data"] = new JObject
                         {
-                            ["text"] = message + "\n"
+                            ["text"] = message
                         }
                         }
                     }
@@ -166,7 +166,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
                         ["type"] = "text",
                         ["data"] = new JObject
                         {
-                            ["text"] = text + "\n"
+                            ["text"] = text
                         }
                     },
                     new JObject
@@ -197,6 +197,160 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
             string json = JsonConvert.SerializeObject(messageData);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             return await _httpService.SendPostRequestAsync($"{_servicePrefix}send_like", content, sendToConsole);
+        }
+
+        public async Task<string> SendPrivateMesageDirectMessageAsync(long user_id, string message, bool autoEscape = false, bool sendToConsole = true)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var messageData = new JObject
+                {
+                    ["user_id"] = user_id,
+                    ["message"] = new JArray
+                {
+                    new JObject
+                    {
+                        ["type"] = "text",
+                        ["data"] = new JObject
+                        {
+                            ["text"] = message
+                        }
+                        }
+                    }
+                };
+                string json = JsonConvert.SerializeObject(messageData);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                return await _httpService.SendPostRequestAsync($"{_servicePrefix}send_private_msg", content, sendToConsole);
+            }
+        }
+
+        public async Task<string> SendPrivateMessageAsync(long user_id, long message_id, string message, bool autoEscape = false, bool sendToConsole = true)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var messageData = new JObject
+                {
+                    ["user_id"] = user_id,
+                    ["message"] = new JArray
+                    {
+                    new JObject
+                    {
+                        ["type"] = "reply",
+                        ["data"] = new JObject
+                        {
+                            ["id"] = message_id,
+                        }
+                    },
+                    new JObject
+                    {
+                        ["type"] = "text",
+                        ["data"] = new JObject
+                        {
+                            ["text"] = message
+                        }
+                        }
+                    }
+                };
+                string json = JsonConvert.SerializeObject(messageData);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                return await _httpService.SendPostRequestAsync($"{_servicePrefix}send_private_msg", content, sendToConsole);
+            }
+        }
+
+        public async Task<string> SendPrivateImageMessageAsync(long user_id, long message_id, string url, string summary, bool sendToConsole = true)
+        {
+            var messageData = new JObject
+            {
+                ["user_id"] = user_id,
+                ["message"] = new JArray
+                {
+                    new JObject
+                    {
+                        ["type"] = "reply",
+                        ["data"] = new JObject
+                        {
+                            ["id"] = message_id,
+                        }
+                    },
+                    new JObject
+                    {
+                        ["type"] = "image",
+                        ["data"] = new JObject
+                        {
+                            ["url"] = url,
+                            ["summary"] = summary
+                        }
+                        }
+                    }
+            };
+
+            string json = JsonConvert.SerializeObject(messageData);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            return await _httpService.SendPostRequestAsync($"{_servicePrefix}send_private_msg", content, sendToConsole);
+        }
+
+        public async Task<string> SendPrivateVoiceMessageAsync(long user_id, long url, bool sendToConsole = true)
+        {
+            var messageData = new JObject
+            {
+                ["user_id"] = user_id,
+                ["message"] = new JArray
+                {
+                    new JObject
+                    {
+                        ["type"] = "record",
+                        ["data"] = new JObject
+                        {
+                            ["file "] = url
+                        }
+                    }
+                }
+            };
+
+            string json = JsonConvert.SerializeObject(messageData);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            return await _httpService.SendPostRequestAsync($"{_servicePrefix}send_private_msg", content, sendToConsole);
+        }
+
+        public async Task<string> SendPrivateMessageAsync(long user_id, long message_id, string text, string imageUrl, long at_userId, string name, string summary, bool sendToConsole = true)
+        {
+            var messageData = new JObject
+            {
+                ["user_id"] = user_id,
+                ["message"] = new JArray
+                {
+                    new JObject
+                    {
+                        ["type"] = "reply",
+                        ["data"] = new JObject
+                        {
+                            ["id"] = message_id,
+                        }
+                    },
+                    new JObject
+                    {
+                        ["type"] = "text",
+                        ["data"] = new JObject
+                        {
+                            ["text"] = text
+                        }
+                    },
+                    new JObject
+                    {
+                        ["type"] = "image",
+                        ["data"] = new JObject
+                        {
+                            ["summary"] = summary,
+                            ["subType"] = 0,
+                            ["url"] = imageUrl
+                        }
+                    }
+                }
+            };
+
+            string json = JsonConvert.SerializeObject(messageData);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            return await _httpService.SendPostRequestAsync($"{_servicePrefix}send_private_msg", content, sendToConsole);
         }
     }
 }

@@ -29,7 +29,7 @@ namespace QQBotCodePlugin.QQBot.abilities.Memes
             {
                 return;
             }
-            if (!message.StartsWith("/龙图"))
+            if (!message.Equals("/龙图"))
             {
                 return;
             }

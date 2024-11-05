@@ -50,25 +50,30 @@ namespace QQBotCodePlugin.QQBot.abilities
             switch (parts.Length)
             {
                 case 1 when IsGameRunning(groupId):
-                    await bot.Message.sendMessage(groupId, e.MessageId, ProcessGuess(e.Sender.UserId, groupId, e.Sender.Nickname, message));
+                    string msg = ProcessGuess(e.Sender.UserId, groupId, e.Sender.Nickname, message);
+                    if (string.IsNullOrEmpty(msg)) return;
+                    await bot.Message.sendMessage(groupId, e.MessageId, msg);
                     break;
                 case 2:
                     HandleCommand(groupId, e.MessageId, e.Sender.UserId, parts[1], e.Sender.Nickname);
                     break;
                 default:
-                    await bot.Message.sendMessage(groupId, e.MessageId, "用法:\n/数字炸弹 join\n/数字炸弹 leave\n/数字炸弹 list\n数字炸弹 start\n/数字炸弹 stop\n详细信息请输入/help");
+                    await bot.Message.sendMessage(groupId, e.MessageId, "用法:\n/数字炸弹 join\n/数字炸弹 leave\n/数字炸弹 list\n/数字炸弹 start\n/数字炸弹 stop\n详细信息请输入/help");
                     break;
             }
         }
 
         private string ProcessGuess(long userId, long groupId, string name, string message)
         {
+            var gameState = GetGameState(groupId);
+            if (!gameState.Players.ContainsKey(userId))
+            {
+                return null;
+            }
             if (!int.TryParse(message, out int guess))
             {
                 return "输入错误，请输入一个有效的数字";
             }
-
-            var gameState = GetGameState(groupId);
             if (gameState == null || !gameState.Players.ContainsKey(userId))
             {
                 return "你不在游玩列表中哦~";
@@ -158,6 +163,10 @@ namespace QQBotCodePlugin.QQBot.abilities
             if (gameState.Players.Count == 0)
             {
                 return "人都没有,开始什么嘛! ⁽⁽(੭ꐦ •̀Д•́ )੭*⁾⁾";
+            }
+            if (gameState.Players.Count == 1)
+            {
+                return "人太少了捏";
             }
             if (gameState.IsRunning)
             {

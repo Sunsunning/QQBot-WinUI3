@@ -20,11 +20,11 @@ namespace QQBotCodePlugin.QQBot
         private HttpListener _listener;
         private int _port;
         private string _ip;
-        private string serviceAddress;
         private StackPanel _console;
         private Logger Logger;
         private readonly string BotPath;
         private PluginHost plugin;
+        public string serviceAddress { get; }
         public bool loadPlugin { get; }
         public HelpCommandHelper helpCommandHelper { get; }
         public IConfigService configService { get; }
@@ -53,6 +53,7 @@ namespace QQBotCodePlugin.QQBot
             Initialized();
             if (loadPlugin) LoadingPlugin();
         }
+
         public List<IPlugin> GetPluginsList() => plugin.GetPlugins();
         public StackPanel getConsole() => _console;
         public Logger getLogger() => Logger;
@@ -145,21 +146,17 @@ namespace QQBotCodePlugin.QQBot
                         string json = await reader.ReadToEndAsync();
                         Logger.Debug(json);
                         MessageEvent message = new ParseJson(json, _console, this).Get();
+
                         if (message.MessageType == null)
                         {
-                            await otherEvent(message);
                             return;
                         }
-
-
                         if (message.MessageType.Equals("group"))
                         {
-                            Logger.Info($"[{message.GroupId}] {message.Sender.Nickname} -> {message.Messages[0].Data.Text}");
                             GroupReceived(this, message);
                         }
                         else
                         {
-                            Logger.Info($"[{message.UserId}] {message.Sender.Nickname} -> {message.Messages[0].Data.Text}");
                             PrivateReceived(this, message);
                         }
 
@@ -217,14 +214,6 @@ namespace QQBotCodePlugin.QQBot
             }
         }
 
-        private async Task otherEvent(MessageEvent @event)
-        {
-            if (@event.SubType == null)
-            {
-                return;
-            }
-        }
-
         public string getServiceAddress() => serviceAddress;
     }
 
@@ -261,7 +250,10 @@ namespace QQBotCodePlugin.QQBot
         {
             return await _service.SendGroupMessageAsync(@id, @message_id, text, url, at_userId, name, summary, sendToConsole);
         }
-
+        public async Task<string> sendPrivateMessage(long @id,string @message,bool @autoEscape = false,bool @sendToConsole = true)
+        {
+            return await _service.SendPrivateMesageDirectMessageAsync(id,message,autoEscape,sendToConsole);
+        }
         public async Task<string> sendLike(long @id, int @times, bool @sendToConsole = true)
         {
             return await _service.sendLike(@id, @times, sendToConsole);

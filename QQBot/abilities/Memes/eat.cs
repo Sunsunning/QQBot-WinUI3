@@ -26,7 +26,7 @@ namespace QQBotCodePlugin.QQBot.abilities.Memes
         private async void Bot_GroupReceived(object sender, MessageEvent @event)
         {
             string message = null;
-            string? user_id = null;
+            string user_id = null;
             if (@event.Messages[0].Type.Equals("text"))
             {
                 message = @event.Messages[0].Data.Text;

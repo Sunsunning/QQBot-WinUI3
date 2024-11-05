@@ -40,7 +40,7 @@ namespace QQBotCodePlugin.QQBot.abilities
         private async void OnMessageReceived(object sender, MessageEvent e)
         {
             string message = e.Messages[0].Data.Text;
-            if (string.IsNullOrEmpty(message) || !message.StartsWith("/今日老婆"))
+            if (string.IsNullOrEmpty(message) || !(message.Equals("/今日老婆") || message.Equals("/离婚")))
             {
                 return;
             }
@@ -51,15 +51,15 @@ namespace QQBotCodePlugin.QQBot.abilities
 
             if (target != -1)
             {
-                string url = $"http://q.qlogo.cn/headimg_dl?dst_uin={target}&spec=640&img_type=jpg";
                 User user = GetUserByQid(target);
-                await _bot.Message.sendGroupMessageAndImage(e.GroupId, e.MessageId, $"\n你今天有{user.Nickname}了你这个花心的人!", url, senderId, e.Sender.Nickname);
+                string url = $"http://q.qlogo.cn/headimg_dl?dst_uin={target}&spec=640&img_type=jpg";
+                await _bot.Message.sendGroupMessageAndImage(e.GroupId, e.MessageId, $"\n你今天有{user.Nickname}({user.UserId})了你这个花心的人!", url, senderId, e.Sender.Nickname);
             }
             else if (_users != null && _users.Count > 0)
             {
                 User wife = _users[GenerateRandomNumber(0, _users.Count)];
                 string avatar = $"http://q.qlogo.cn/headimg_dl?dst_uin={wife.UserId}&spec=640&img_type=jpg";
-                await _bot.Message.sendGroupMessageAndImage(e.GroupId, e.MessageId, $"\n你今日的老婆是{wife.Nickname}!", avatar, senderId, e.Sender.Nickname);
+                await _bot.Message.sendGroupMessageAndImage(e.GroupId, e.MessageId, $"\n你今日的老婆是\n{wife.Nickname}({wife.UserId})!", avatar, senderId, e.Sender.Nickname);
                 wifeManager.AddOrUpdateWife(e.GroupId, senderId, wife.UserId);
             }
             else

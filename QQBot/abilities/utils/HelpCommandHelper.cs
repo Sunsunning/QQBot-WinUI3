@@ -15,13 +15,16 @@ namespace QQBotCodePlugin.QQBot.abilities.utils
         {
             commands[header] = _commands;
         }
-        public List<string> getCommands(string header) {
-            if (!commands.ContainsKey(header)) {
+        public List<string> getCommands(string header)
+        {
+            if (!commands.ContainsKey(header))
+            {
                 addCommands(header, new List<string>());
                 return new List<string>();
             }
-            if (commands[header] == null) {
-                return new List<string>();                
+            if (commands[header] == null)
+            {
+                return new List<string>();
             }
             return commands[header];
         }

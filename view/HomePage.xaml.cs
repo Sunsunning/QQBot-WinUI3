@@ -1,6 +1,5 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using QQBotCodePlugin.utils;
 using System;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -14,17 +13,12 @@ namespace QQBotCodePlugin.view
     public sealed partial class HomePage : Page
     {
         private readonly DateTime CurrentTime;
-        private readonly SettingManager _settingManager;
-        private readonly Dialog _dialog;
         public static event EventHandler<string> NavigateToPageRequested;
-        public static event EventHandler<RunBotInfo> RunQQbotRequested;
 
         public HomePage()
         {
             this.InitializeComponent();
             CurrentTime = DateTime.Now;
-            _settingManager = new SettingManager();
-            _dialog = new Dialog();
             UpdateTimeText();
 
         }

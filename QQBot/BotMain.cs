@@ -1,5 +1,6 @@
 ﻿using Microsoft.UI.Xaml.Controls;
 using QQBotCodePlugin.QQBot.abilities;
+using QQBotCodePlugin.QQBot.abilities.AI;
 using QQBotCodePlugin.QQBot.abilities.Memes;
 using QQBotCodePlugin.QQBot.utils.IServices;
 using QQBotCodePlugin.utils;
@@ -66,7 +67,8 @@ namespace QQBotCodePlugin.QQBot
                 }
                 if (key.Key == "AIChat" && key.Value == true)
                 {
-                    eventHandlers.Add(new AIChat());
+                    eventHandlers.Add(new AIChatGroup());
+                    eventHandlers.Add(new AIChatPrivate());
                 }
                 if (key.Key == "Help" && key.Value == true)
                 {
