@@ -33,12 +33,7 @@ namespace QQBotCodePlugin.QQBot.abilities.AI
             this.bot = bot;
             this.bot.PrivateReceived += OnMessageReceived;
             chatService = new ChatService(url, bot.getConsole(), bot);
-            List<string> description = bot.helpCommandHelper.getCommands("AI类");
-            description.Add("/model - 切换模型,查看模型列表请输入/model查看");
-            description.Add("/model current - 查看当前使用的模型");
-            description.Add("使用 #+文本 来进行AI聊天");
-            bot.helpCommandHelper.addCommands("AI类", description);
-            bot.getLogger().Info($"{ToString()}注册完成");
+            bot.getLogger().Info($"{ToString()}(私聊)注册完成");
         }
 
         private async void OnMessageReceived(object sender, MessageEvent e)
