@@ -2,8 +2,6 @@
 using QQBotCodePlugin.QQBot.utils.IServices;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using static PluginDLL.Class1;
 
@@ -76,7 +74,7 @@ namespace QQBotCodePlugin.QQBot.abilities.AI
                     return;
                 }
 
-                string answer = await Chat(model, id, "user",message);
+                string answer = await Chat(model, id, "user", message);
 
                 await bot.Message.sendPrivateMessage(id, answer);
 

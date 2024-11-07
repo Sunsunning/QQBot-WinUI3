@@ -250,9 +250,9 @@ namespace QQBotCodePlugin.QQBot
         {
             return await _service.SendGroupMessageAsync(@id, @message_id, text, url, at_userId, name, summary, sendToConsole);
         }
-        public async Task<string> sendPrivateMessage(long @id,string @message,bool @autoEscape = false,bool @sendToConsole = true)
+        public async Task<string> sendPrivateMessage(long @id, string @message, bool @autoEscape = false, bool @sendToConsole = true)
         {
-            return await _service.SendPrivateMesageDirectMessageAsync(id,message,autoEscape,sendToConsole);
+            return await _service.SendPrivateMesageDirectMessageAsync(id, message, autoEscape, sendToConsole);
         }
         public async Task<string> sendLike(long @id, int @times, bool @sendToConsole = true)
         {

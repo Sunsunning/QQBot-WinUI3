@@ -60,6 +60,9 @@ namespace QQBotCodePlugin.QQBot.abilities
                         }
                     }
                 }
+                commands.Add("- QQBotManager项目地址");
+                commands.Add("github: 不告诉你");
+                commands.Add("gitee: 不告诉你");
                 commands.Add("----------------命令列表----------------");
             }
 
