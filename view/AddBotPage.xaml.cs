@@ -29,12 +29,12 @@ namespace QQBotCodePlugin.view
 
         private void OptionsAllCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = voice.IsChecked = wife.IsChecked = true;
+            Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = wife.IsChecked = true;
         }
 
         private void OptionsAllCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = voice.IsChecked = wife.IsChecked = false;
+            Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = wife.IsChecked = false;
         }
 
         private void AreAllAbilitiesSelected()
@@ -54,10 +54,9 @@ namespace QQBotCodePlugin.view
             if (ping.IsChecked == true) checkedCount++;
             if (RunWindowsCommand.IsChecked == true) checkedCount++;
             if (Sky.IsChecked == true) checkedCount++;
-            if (voice.IsChecked == true) checkedCount++;
             if (wife.IsChecked == true) checkedCount++;
 
-            if (checkedCount == 16)
+            if (checkedCount == 15)
             {
                 OptionsAllCheckBox.IsChecked = true;
             }
@@ -98,6 +97,11 @@ namespace QQBotCodePlugin.view
                 _dialog.show("错误", "服务监听端口与事件上报端口不能相同", "好的", null, null, this.XamlRoot);
                 return;
             }
+            if (AIChat.IsChecked == true && string.IsNullOrEmpty(key.Text))
+            {
+                _dialog.show("错误", "你已启用ChatGPT请填写GPT Key若无请去\nhttps://github.com/chatanywhere/GPT_API_free领取", "好的", null, null, this.XamlRoot);
+                return;
+            }
             try
             {
                 string rootPath = settingManager.GetValue<string>("QQBotPath");
@@ -132,6 +136,7 @@ namespace QQBotCodePlugin.view
             var json = new JObject
             {
                 ["Name"] = _BotName,
+                ["key"] = key.Text,
                 ["Plugin"] = Plugin.IsChecked,
                 ["Description"] = _Description,
                 ["IP"] = _IP,
@@ -155,7 +160,6 @@ namespace QQBotCodePlugin.view
                     ["Ping"] = ping.IsChecked,
                     ["RunWindowsCommand"] = RunWindowsCommand.IsChecked,
                     ["Sky"] = Sky.IsChecked,
-                    ["voice"] = voice.IsChecked,
                     ["wife"] = wife.IsChecked
                 }
             };

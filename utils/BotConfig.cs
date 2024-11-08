@@ -22,7 +22,6 @@
         public bool Ping { get; set; }
         public bool RunWindowsCommand { get; set; }
         public bool Sky { get; set; }
-        public bool Voice { get; set; }
         public bool Wife { get; set; }
     }
 

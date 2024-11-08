@@ -100,11 +100,6 @@ namespace QQBotCodePlugin.QQBot
                     eventHandlers.Add(new SearchSky());
                 }
 
-                if (key.Key == "voice" && key.Value == true)
-                {
-                    eventHandlers.Add(new voice());
-                }
-
                 if (key.Key == "wife" && key.Value == true)
                 {
                     eventHandlers.Add(new wife());

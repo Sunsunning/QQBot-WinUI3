@@ -1,4 +1,5 @@
 ﻿using Microsoft.UI.Xaml.Controls;
+using Newtonsoft.Json.Linq;
 using QQBotCodePlugin.Plugin;
 using QQBotCodePlugin.QQBot.abilities.utils;
 using QQBotCodePlugin.QQBot.utils;
@@ -62,6 +63,11 @@ namespace QQBotCodePlugin.QQBot
         public string getLogs() => Path.Combine(BotPath, "logs");
         public string getTemp() => Path.Combine(BotPath, "temp");
         public string getPlugins() => Path.Combine(BotPath, "plugins");
+        public string getGPTKey()
+        {
+            string json = File.ReadAllText(Path.Combine(BotPath, "bot.json"));
+            return (string)JObject.Parse(json)["key"];
+        }
 
         private void LoadingPlugin()
         {

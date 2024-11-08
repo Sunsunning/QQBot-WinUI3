@@ -19,7 +19,8 @@
             <TextBox Name="IP" Header="IP地址" Text="127.0.0.1"/>
             <NumberBox Name="ServerPort" Header="服务监听端口" SpinButtonPlacementMode="Inline" Value="8080" Minimum="0" MaxHeight="65535"/>
             <NumberBox Name="EventPort" Header="事件上报端口" SpinButtonPlacementMode="Inline" Value="3000" Minimum="0" Maximum="65535"/>
-
+            <TextBox Name="key" Header="GPT Key"></TextBox>
+            
             <Button Name="Submit" Content="提交" Style="{StaticResource AccentButtonStyle}" Click="Submit_Click" Margin="0,10,0,0" HorizontalAlignment="Stretch"></Button>
         </StackPanel>
         
@@ -37,7 +38,6 @@
                 <CheckBox x:Name="ping" Content="Ping" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
                 <CheckBox x:Name="RunWindowsCommand" Content="运行windows命令" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
                 <CheckBox x:Name="Sky" Content="光遇查询" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
-                <CheckBox x:Name="voice" Content="语音合成" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
                 <CheckBox x:Name="wife" Content="今日辣泼" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
 
                 <CheckBox x:Name="ba" Content="Ba标题表情包" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>

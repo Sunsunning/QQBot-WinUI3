@@ -12,10 +12,11 @@ namespace QQBotCodePlugin.QQBot.utils.AI
     public class ChatService
     {
         private readonly string _url;
+        private readonly string _key;
         private readonly HttpClient _httpClient;
         private readonly HttpWithHeaderService _httpService;
         private readonly Dictionary<long, List<ChatHistory>> _histories;
-        private readonly StackPanel _console;
+        private readonly Bot _bot;
 
         public class ChatHistory
         {
@@ -25,8 +26,9 @@ namespace QQBotCodePlugin.QQBot.utils.AI
 
         public ChatService(string url, StackPanel console, Bot bot)
         {
+            _bot = bot;
             _url = url;
-            _console = console;
+            _key = _bot.getGPTKey();
             _httpClient = new HttpClient();
             _histories = new Dictionary<long, List<ChatHistory>>();
             _httpService = new HttpWithHeaderService(this._httpClient, console, bot);
@@ -51,6 +53,10 @@ namespace QQBotCodePlugin.QQBot.utils.AI
 
         public async Task<string> PostChatDataAsync(string model, long id, string role, string question)
         {
+            if (string.IsNullOrEmpty(_key))
+            {
+                return "未配置GPT Key无法给出回复";
+            }
             AddToHistory(id, role, question);
             var json = new JObject
             {
@@ -63,7 +69,7 @@ namespace QQBotCodePlugin.QQBot.utils.AI
             };
 
             var content = new StringContent(json.ToString(), Encoding.UTF8, "application/json");
-            string response = await _httpService.SendHeaderPostRequestAsync(_url, content, null, "sk-7disM0OwJrd96Y8CWDwVHXcE4X8IECk8iFCkP1NGQTq2mTfb", false);
+            string response = await _httpService.SendHeaderPostRequestAsync(_url, content, null,_key, false);
             string message = (string)JObject.Parse(response)["choices"][0]["message"]["content"];
             return message;
         }

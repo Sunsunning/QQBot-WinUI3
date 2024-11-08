@@ -190,6 +190,7 @@ namespace QQBotCodePlugin.view
 
             return border;
         }
+
         private void OpenButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
@@ -232,7 +233,6 @@ namespace QQBotCodePlugin.view
                     { "Ping",botConfig.Abilities.Ping },
                     { "RunWindowsCommand",botConfig.Abilities.RunWindowsCommand },
                     { "Sky",botConfig.Abilities.Sky },
-                    { "voice",botConfig.Abilities.Voice },
                     { "wife",botConfig.Abilities.Wife }
                 }
             };

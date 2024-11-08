@@ -24,7 +24,7 @@ namespace QQBotCodePlugin
         {
             this.InitializeComponent();
             TrySetAcrylicBackdrop(true);
-            this.viewer.SelectedItem = HomePage;
+            viewer.SelectedItem = HomePage;
             view.HomePage.NavigateToPageRequested += _homePage_SelectionFrame;
             view.BotListPage.NavigateToPageRequested += _homePage_SelectionFrame;
         }
