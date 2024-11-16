@@ -16,17 +16,54 @@ namespace QQBotCodePlugin
     /// </summary>
     public sealed partial class MainWindow : Window
     {
-
+        SettingManager settingManager;
         WindowsSystemDispatcherQueueHelper m_wsdqHelper; // See separate sample below for implementation
         Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController m_acrylicController;
         Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration m_configurationSource;
         public MainWindow()
         {
             this.InitializeComponent();
-            TrySetAcrylicBackdrop(true);
+            settingManager = new SettingManager();
             viewer.SelectedItem = HomePage;
             view.HomePage.NavigateToPageRequested += _homePage_SelectionFrame;
             view.BotListPage.NavigateToPageRequested += _homePage_SelectionFrame;
+            view.SettingPage.ChangeBackground += _settingPage_ChangeBackground;
+            Initialize();
+        }
+
+        public void _settingPage_ChangeBackground(object sender, string background)
+        {
+            if (background.Equals("Acrylic(Thin)"))
+            {
+                TrySetAcrylicBackdrop(true);
+                return;
+            }
+            TrySetMicaBackdrop(true);
+        }
+
+        void Initialize()
+        {
+            if (!settingManager.ContainsKey("BackGround")) return;
+            if (settingManager.GetValue<string>("BackGround").Equals("Acrylic(Thin)"))
+            {
+                TrySetAcrylicBackdrop(true);
+                return;
+            }
+            TrySetMicaBackdrop(true);
+        }
+
+        bool TrySetMicaBackdrop(bool useMicaAlt)
+        {
+            if (Microsoft.UI.Composition.SystemBackdrops.MicaController.IsSupported())
+            {
+                Microsoft.UI.Xaml.Media.MicaBackdrop micaBackdrop = new Microsoft.UI.Xaml.Media.MicaBackdrop();
+                micaBackdrop.Kind = useMicaAlt ? Microsoft.UI.Composition.SystemBackdrops.MicaKind.BaseAlt : Microsoft.UI.Composition.SystemBackdrops.MicaKind.Base;
+                this.SystemBackdrop = micaBackdrop;
+
+                return true;
+            }
+
+            return false;
         }
 
         bool TrySetAcrylicBackdrop(bool useAcrylicThin)
@@ -114,6 +151,7 @@ namespace QQBotCodePlugin
                 "Console" => typeof(ConsolePage),
                 "AddBot" => typeof(AddBotPage),
                 "BotList" => typeof(BotListPage),
+                "PluginStore" => typeof(PluginStorePage),
                 _ => typeof(NotFoundPage)
             };
             PagesContent.Navigate(pageType, null, new DrillInNavigationTransitionInfo());

@@ -3,40 +3,133 @@
   "WorkspaceRootPath": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\pluginstorepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\pluginstorepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Chen\\Project\\CSharpProject\\MinecraftTools\\view\\SettingPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\settingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\settingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\addbotpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\addbotpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\botmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\botmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\utils\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:utils\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\ai\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\utils\\ai\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\qq\\httpwithheaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\utils\\qq\\httpwithheaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\botlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\botlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\utils\\botconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:utils\\botconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\utils\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:utils\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\settingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\settingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\pluginstorepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\pluginstorepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\notfoundpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\notfoundpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\notfoundpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\notfoundpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\consolepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\consolepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\utils\\settingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:utils\\settingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Chen\\Project\\CSharpProject\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\Plugin.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Chen\\Project\\CSharpProject\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\ssss.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\abilities\\ai\\aichatgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\abilities\\ai\\aichatgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\plugin\\pluginhost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:plugin\\pluginhost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\plugin\\service\\hostloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:plugin\\service\\hostloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\utils\\runbotinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:utils\\runbotinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\botlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\botlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\iservices\\ieventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\utils\\iservices\\ieventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\abilities\\ping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\abilities\\ping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\botmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\botmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\qq\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\utils\\qq\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\ai\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\utils\\ai\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\qq\\httpwithheaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\utils\\qq\\httpwithheaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\botlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\botlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\addbotpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -47,24 +140,8 @@
       "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\abilities\\ai\\aichatprivate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\abilities\\ai\\aichatgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\abilities\\ai\\aichatgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\utils\\runbotinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:utils\\runbotinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\utils\\botconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:utils\\botconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\abilities\\help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\abilities\\help.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\iservices\\ieventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\utils\\iservices\\ieventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\iservices\\ihttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -91,27 +168,7 @@
       "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\settingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\settingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\notfoundpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\notfoundpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Chen\\Project\\CSharpProject\\BilibiliPlugin\\BilibiliPlugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\plugin\\service\\hostloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:plugin\\service\\hostloggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\qq\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\utils\\qq\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\utils\\qq\\httpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -132,10 +189,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\abilities\\memes\\cheshirepicture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\abilities\\memes\\cheshirepicture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\plugin\\pluginhost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:plugin\\pluginhost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\abilities\\numberboom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -162,16 +215,8 @@
       "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\consolepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\view\\consolepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:view\\consolepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\XamlTypeInfo.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\XamlTypeInfo.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -180,18 +225,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\abilities\\kudosme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\abilities\\kudosme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\utils\\settingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:utils\\settingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|d:\\chen\\project\\csharpproject\\qqbotcodeplugin\\qqbot\\abilities\\ping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DA111C-3ED0-4945-B73A-5D388B23B137}|QQBotCodePlugin.csproj|solutionrelative:qqbot\\abilities\\ping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -201,89 +234,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AddBotPage.xaml",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\AddBotPage.xaml",
-              "RelativeDocumentMoniker": "view\\AddBotPage.xaml",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\AddBotPage.xaml",
-              "RelativeToolTip": "view\\AddBotPage.xaml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-08T11:24:16.673Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Bot.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\Bot.cs",
-              "RelativeDocumentMoniker": "QQBot\\Bot.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\Bot.cs",
-              "RelativeToolTip": "QQBot\\Bot.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAADwv0QAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PluginStorePage.xaml.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\PluginStorePage.xaml.cs",
+              "RelativeDocumentMoniker": "view\\PluginStorePage.xaml.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\PluginStorePage.xaml.cs",
+              "RelativeToolTip": "view\\PluginStorePage.xaml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAxwL4AAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T08:01:47.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HttpWithHeaderService.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\HttpWithHeaderService.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\QQ\\HttpWithHeaderService.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\HttpWithHeaderService.cs",
-              "RelativeToolTip": "QQBot\\utils\\QQ\\HttpWithHeaderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T09:56:40.745Z",
+              "WhenOpened": "2024-11-15T11:13:59.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ChatService.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\AI\\ChatService.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\AI\\ChatService.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\AI\\ChatService.cs",
-              "RelativeToolTip": "QQBot\\utils\\AI\\ChatService.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAxwDgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:02:32.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.g.i.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs",
-              "RelativeDocumentMoniker": "obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs",
-              "RelativeToolTip": "obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAywDwAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T10:58:53.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BotMain.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\BotMain.cs",
-              "RelativeDocumentMoniker": "QQBot\\BotMain.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\BotMain.cs",
-              "RelativeToolTip": "QQBot\\BotMain.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAADwv2QAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T11:09:36.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "AddBotPage.xaml.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\AddBotPage.xaml.cs",
               "RelativeDocumentMoniker": "view\\AddBotPage.xaml.cs",
@@ -296,15 +264,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AIChatGroup.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\AI\\AIChatGroup.cs",
-              "RelativeDocumentMoniker": "QQBot\\abilities\\AI\\AIChatGroup.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\AI\\AIChatGroup.cs",
-              "RelativeToolTip": "QQBot\\abilities\\AI\\AIChatGroup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "SettingPage.xaml.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\SettingPage.xaml.cs",
+              "RelativeDocumentMoniker": "view\\SettingPage.xaml.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\SettingPage.xaml.cs",
+              "RelativeToolTip": "view\\SettingPage.xaml.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAywBcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:14:47.361Z",
+              "WhenOpened": "2024-11-02T12:02:27.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dialog.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\Dialog.cs",
+              "RelativeDocumentMoniker": "utils\\Dialog.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\Dialog.cs",
+              "RelativeToolTip": "utils\\Dialog.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T11:19:17.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAywFAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T05:58:13.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SettingPage.xaml.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\MinecraftTools\\view\\SettingPage.xaml.cs",
+              "RelativeDocumentMoniker": "..\\MinecraftTools\\view\\SettingPage.xaml.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\MinecraftTools\\view\\SettingPage.xaml.cs",
+              "RelativeToolTip": "..\\MinecraftTools\\view\\SettingPage.xaml.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAADwv0YAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T15:12:35.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BotConfig.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\BotConfig.cs",
+              "RelativeDocumentMoniker": "utils\\BotConfig.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\BotConfig.cs",
+              "RelativeToolTip": "utils\\BotConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T11:19:11.99Z",
               "EditorCaption": ""
             },
             {
@@ -315,53 +335,144 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAywHYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T05:54:33.912Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BotListPage.xaml.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\BotListPage.xaml.cs",
-              "RelativeDocumentMoniker": "view\\BotListPage.xaml.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\BotListPage.xaml.cs",
-              "RelativeToolTip": "view\\BotListPage.xaml.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAywB8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:08:22.64Z",
+              "DocumentIndex": 12,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvyAAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-02T05:54:36.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Dialog.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\Dialog.cs",
-              "RelativeDocumentMoniker": "utils\\Dialog.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\Dialog.cs",
-              "RelativeToolTip": "utils\\Dialog.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAywCAAAAAMAAAAAAAAAA==",
+              "Title": "SettingPage.xaml",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\SettingPage.xaml",
+              "RelativeDocumentMoniker": "view\\SettingPage.xaml",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\SettingPage.xaml",
+              "RelativeToolTip": "view\\SettingPage.xaml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwDAAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-09T13:04:22.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NotFoundPage.xaml.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\NotFoundPage.xaml.cs",
+              "RelativeDocumentMoniker": "view\\NotFoundPage.xaml.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\NotFoundPage.xaml.cs",
+              "RelativeToolTip": "view\\NotFoundPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:19:17.143Z",
+              "WhenOpened": "2024-11-08T11:08:25.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "AIChatPrivate.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\AI\\AIChatPrivate.cs",
-              "RelativeDocumentMoniker": "QQBot\\abilities\\AI\\AIChatPrivate.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\AI\\AIChatPrivate.cs",
-              "RelativeToolTip": "QQBot\\abilities\\AI\\AIChatPrivate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T11:04:38.279Z",
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\HomePage.xaml",
+              "RelativeDocumentMoniker": "view\\HomePage.xaml",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\HomePage.xaml",
+              "RelativeToolTip": "view\\HomePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-16T14:43:32.649Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
+              "Title": "PluginStorePage.xaml",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\PluginStorePage.xaml",
+              "RelativeDocumentMoniker": "view\\PluginStorePage.xaml",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\PluginStorePage.xaml",
+              "RelativeToolTip": "view\\PluginStorePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-15T10:09:39.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NotFoundPage.xaml",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\NotFoundPage.xaml",
+              "RelativeDocumentMoniker": "view\\NotFoundPage.xaml",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\NotFoundPage.xaml",
+              "RelativeToolTip": "view\\NotFoundPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-15T11:09:17.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ConsolePage.xaml.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\ConsolePage.xaml.cs",
+              "RelativeDocumentMoniker": "view\\ConsolePage.xaml.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\ConsolePage.xaml.cs",
+              "RelativeToolTip": "view\\ConsolePage.xaml.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAADwv5AAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T05:54:44.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SettingManager.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\SettingManager.cs",
+              "RelativeDocumentMoniker": "utils\\SettingManager.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\SettingManager.cs",
+              "RelativeToolTip": "utils\\SettingManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T05:58:41.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Plugin.json",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\Plugin.json",
+              "RelativeDocumentMoniker": "..\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\Plugin.json",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\Plugin.json",
+              "RelativeToolTip": "..\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\Plugin.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-16T12:05:27.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ssss.json",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\ssss.json",
+              "RelativeDocumentMoniker": "..\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\ssss.json",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\ssss.json",
+              "RelativeToolTip": "..\\PluginStoreHttpServer\\bin\\Debug\\net8.0\\PluginStore\\PluginJson\\ssss.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-16T11:09:00.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "RunBotInfo.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\RunBotInfo.cs",
               "RelativeDocumentMoniker": "utils\\RunBotInfo.cs",
@@ -373,163 +484,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IEventHandler.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\IServices\\IEventHandler.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\IServices\\IEventHandler.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\IServices\\IEventHandler.cs",
-              "RelativeToolTip": "QQBot\\utils\\IServices\\IEventHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "HostLoggerService.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\Plugin\\Service\\HostLoggerService.cs",
+              "RelativeDocumentMoniker": "Plugin\\Service\\HostLoggerService.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\Plugin\\Service\\HostLoggerService.cs",
+              "RelativeToolTip": "Plugin\\Service\\HostLoggerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:19:55.103Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Help.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Help.cs",
-              "RelativeDocumentMoniker": "QQBot\\abilities\\Help.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Help.cs",
-              "RelativeToolTip": "QQBot\\abilities\\Help.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAADwvz0AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:14:46.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BotConfig.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\BotConfig.cs",
-              "RelativeDocumentMoniker": "utils\\BotConfig.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\BotConfig.cs",
-              "RelativeToolTip": "utils\\BotConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:19:11.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IHttpService.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\IServices\\IHttpService.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\IServices\\IHttpService.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\IServices\\IHttpService.cs",
-              "RelativeToolTip": "QQBot\\utils\\IServices\\IHttpService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:19:50.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GroupMemberList.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\Json\\GroupMemberList.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\Json\\GroupMemberList.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\Json\\GroupMemberList.cs",
-              "RelativeToolTip": "QQBot\\utils\\Json\\GroupMemberList.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:19:42.987Z"
+              "WhenOpened": "2024-11-02T12:10:37.232Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "ConfigService.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\ConfigService.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\QQ\\ConfigService.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\ConfigService.cs",
-              "RelativeToolTip": "QQBot\\utils\\QQ\\ConfigService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "Title": "PluginHost.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\Plugin\\PluginHost.cs",
+              "RelativeDocumentMoniker": "Plugin\\PluginHost.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\Plugin\\PluginHost.cs",
+              "RelativeToolTip": "Plugin\\PluginHost.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAADwvzQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:31:07.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "WifeListData.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\wife\\WifeListData.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\wife\\WifeListData.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\wife\\WifeListData.cs",
-              "RelativeToolTip": "QQBot\\utils\\wife\\WifeListData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:19:21.353Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-08T11:18:26.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "NotFoundPage.xaml.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\NotFoundPage.xaml.cs",
-              "RelativeDocumentMoniker": "view\\NotFoundPage.xaml.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\NotFoundPage.xaml.cs",
-              "RelativeToolTip": "view\\NotFoundPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:08:25.393Z"
+              "WhenOpened": "2024-11-02T08:47:05.793Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "HttpResponse.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\Json\\HttpResponse.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\Json\\HttpResponse.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\Json\\HttpResponse.cs",
-              "RelativeToolTip": "QQBot\\utils\\Json\\HttpResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Title": "AIChatGroup.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\AI\\AIChatGroup.cs",
+              "RelativeDocumentMoniker": "QQBot\\abilities\\AI\\AIChatGroup.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\AI\\AIChatGroup.cs",
+              "RelativeToolTip": "QQBot\\abilities\\AI\\AIChatGroup.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T09:56:42.977Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "MessageService.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\MessageService.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\QQ\\MessageService.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\MessageService.cs",
-              "RelativeToolTip": "QQBot\\utils\\QQ\\MessageService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAADwvygAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T08:35:02.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "HttpService.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\HttpService.cs",
-              "RelativeDocumentMoniker": "QQBot\\utils\\QQ\\HttpService.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\HttpService.cs",
-              "RelativeToolTip": "QQBot\\utils\\QQ\\HttpService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAADwvysAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T12:16:53.029Z"
+              "WhenOpened": "2024-11-02T12:14:47.361Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "SettingPage.xaml.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\SettingPage.xaml.cs",
-              "RelativeDocumentMoniker": "view\\SettingPage.xaml.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\SettingPage.xaml.cs",
-              "RelativeToolTip": "view\\SettingPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:02:27.519Z"
+              "Title": "BotListPage.xaml",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\BotListPage.xaml",
+              "RelativeDocumentMoniker": "view\\BotListPage.xaml",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\BotListPage.xaml",
+              "RelativeToolTip": "view\\BotListPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-15T09:55:46.075Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
+              "Title": "Ping.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Ping.cs",
+              "RelativeDocumentMoniker": "QQBot\\abilities\\Ping.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Ping.cs",
+              "RelativeToolTip": "QQBot\\abilities\\Ping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T05:53:18.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "HomePage.xaml.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\HomePage.xaml.cs",
               "RelativeDocumentMoniker": "view\\HomePage.xaml.cs",
@@ -541,7 +556,225 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "MessageService.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\MessageService.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\QQ\\MessageService.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\MessageService.cs",
+              "RelativeToolTip": "QQBot\\utils\\QQ\\MessageService.cs",
+              "ViewState": "AgIAAE4BAAAAAAAAAADwv0cBAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T08:35:02.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Bot.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\Bot.cs",
+              "RelativeDocumentMoniker": "QQBot\\Bot.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\Bot.cs",
+              "RelativeToolTip": "QQBot\\Bot.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T08:01:47.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ChatService.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\AI\\ChatService.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\AI\\ChatService.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\AI\\ChatService.cs",
+              "RelativeToolTip": "QQBot\\utils\\AI\\ChatService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAxwEgAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T12:02:32.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs",
+              "RelativeDocumentMoniker": "obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs",
+              "RelativeToolTip": "obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\App.g.i.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAywDwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T10:58:53.101Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 25,
+              "Title": "BotMain.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\BotMain.cs",
+              "RelativeDocumentMoniker": "QQBot\\BotMain.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\BotMain.cs",
+              "RelativeToolTip": "QQBot\\BotMain.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAH8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T11:09:36.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IEventHandler.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\IServices\\IEventHandler.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\IServices\\IEventHandler.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\IServices\\IEventHandler.cs",
+              "RelativeToolTip": "QQBot\\utils\\IServices\\IEventHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T11:19:55.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "HttpWithHeaderService.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\HttpWithHeaderService.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\QQ\\HttpWithHeaderService.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\HttpWithHeaderService.cs",
+              "RelativeToolTip": "QQBot\\utils\\QQ\\HttpWithHeaderService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvxgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:56:40.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "BotListPage.xaml.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\BotListPage.xaml.cs",
+              "RelativeDocumentMoniker": "view\\BotListPage.xaml.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\BotListPage.xaml.cs",
+              "RelativeToolTip": "view\\BotListPage.xaml.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAywB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T11:08:22.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AddBotPage.xaml",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\AddBotPage.xaml",
+              "RelativeDocumentMoniker": "view\\AddBotPage.xaml",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\AddBotPage.xaml",
+              "RelativeToolTip": "view\\AddBotPage.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-08T11:24:16.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AIChatPrivate.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\AI\\AIChatPrivate.cs",
+              "RelativeDocumentMoniker": "QQBot\\abilities\\AI\\AIChatPrivate.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\AI\\AIChatPrivate.cs",
+              "RelativeToolTip": "QQBot\\abilities\\AI\\AIChatPrivate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T11:04:38.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Help.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Help.cs",
+              "RelativeDocumentMoniker": "QQBot\\abilities\\Help.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Help.cs",
+              "RelativeToolTip": "QQBot\\abilities\\Help.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAADwvz0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T12:14:46.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IHttpService.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\IServices\\IHttpService.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\IServices\\IHttpService.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\IServices\\IHttpService.cs",
+              "RelativeToolTip": "QQBot\\utils\\IServices\\IHttpService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T11:19:50.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "GroupMemberList.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\Json\\GroupMemberList.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\Json\\GroupMemberList.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\Json\\GroupMemberList.cs",
+              "RelativeToolTip": "QQBot\\utils\\Json\\GroupMemberList.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T11:19:42.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ConfigService.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\ConfigService.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\QQ\\ConfigService.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\ConfigService.cs",
+              "RelativeToolTip": "QQBot\\utils\\QQ\\ConfigService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T12:31:07.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "WifeListData.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\wife\\WifeListData.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\wife\\WifeListData.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\wife\\WifeListData.cs",
+              "RelativeToolTip": "QQBot\\utils\\wife\\WifeListData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T11:19:21.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-08T11:18:26.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "HttpResponse.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\Json\\HttpResponse.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\Json\\HttpResponse.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\Json\\HttpResponse.cs",
+              "RelativeToolTip": "QQBot\\utils\\Json\\HttpResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:56:42.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "HttpService.cs",
+              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\HttpService.cs",
+              "RelativeDocumentMoniker": "QQBot\\utils\\QQ\\HttpService.cs",
+              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\utils\\QQ\\HttpService.cs",
+              "RelativeToolTip": "QQBot\\utils\\QQ\\HttpService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvysAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T12:16:53.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "BilibiliPlugin.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\BilibiliPlugin\\BilibiliPlugin.cs",
               "RelativeDocumentMoniker": "..\\BilibiliPlugin\\BilibiliPlugin.cs",
@@ -553,19 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "HostLoggerService.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\Plugin\\Service\\HostLoggerService.cs",
-              "RelativeDocumentMoniker": "Plugin\\Service\\HostLoggerService.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\Plugin\\Service\\HostLoggerService.cs",
-              "RelativeToolTip": "Plugin\\Service\\HostLoggerService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAywBMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T12:10:37.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 46,
               "Title": "DragonPicture.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Memes\\DragonPicture.cs",
               "RelativeDocumentMoniker": "QQBot\\abilities\\Memes\\DragonPicture.cs",
@@ -577,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 44,
               "Title": "ba.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Memes\\ba.cs",
               "RelativeDocumentMoniker": "QQBot\\abilities\\Memes\\ba.cs",
@@ -589,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 48,
               "Title": "NumberBoom.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\NumberBoom.cs",
               "RelativeDocumentMoniker": "QQBot\\abilities\\NumberBoom.cs",
@@ -601,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 49,
               "Title": "onset.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\onset.cs",
               "RelativeDocumentMoniker": "QQBot\\abilities\\onset.cs",
@@ -613,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 47,
               "Title": "CheshirePicture.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Memes\\CheshirePicture.cs",
               "RelativeDocumentMoniker": "QQBot\\abilities\\Memes\\CheshirePicture.cs",
@@ -625,7 +846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 45,
               "Title": "eat.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Memes\\eat.cs",
               "RelativeDocumentMoniker": "QQBot\\abilities\\Memes\\eat.cs",
@@ -637,7 +858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 53,
               "Title": "ConsolePage.xaml",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\ConsolePage.xaml",
               "RelativeDocumentMoniker": "view\\ConsolePage.xaml",
@@ -649,19 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "PluginHost.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\Plugin\\PluginHost.cs",
-              "RelativeDocumentMoniker": "Plugin\\PluginHost.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\Plugin\\PluginHost.cs",
-              "RelativeToolTip": "Plugin\\PluginHost.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADIAAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T08:47:05.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 50,
               "Title": "wife.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\wife.cs",
               "RelativeDocumentMoniker": "QQBot\\abilities\\wife.cs",
@@ -673,7 +882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 52,
               "Title": "WindowsSystemDispatcherQueueHelper.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\WindowsSystemDispatcherQueueHelper.cs",
               "RelativeDocumentMoniker": "utils\\WindowsSystemDispatcherQueueHelper.cs",
@@ -685,7 +894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 51,
               "Title": "play.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Memes\\play.cs",
               "RelativeDocumentMoniker": "QQBot\\abilities\\Memes\\play.cs",
@@ -697,19 +906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "ConsolePage.xaml.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\ConsolePage.xaml.cs",
-              "RelativeDocumentMoniker": "view\\ConsolePage.xaml.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\view\\ConsolePage.xaml.cs",
-              "RelativeToolTip": "view\\ConsolePage.xaml.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAD4vz8AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T05:54:44.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 54,
               "Title": "XamlTypeInfo.g.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\XamlTypeInfo.g.cs",
               "RelativeDocumentMoniker": "obj\\x64\\Debug\\net8.0-windows10.0.19041.0\\win-x64\\XamlTypeInfo.g.cs",
@@ -721,7 +918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 55,
               "Title": ".gitignore",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -733,43 +930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "SettingManager.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\SettingManager.cs",
-              "RelativeDocumentMoniker": "utils\\SettingManager.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\utils\\SettingManager.cs",
-              "RelativeToolTip": "utils\\SettingManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T05:58:41.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwv1EAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T05:58:13.319Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "ViewState": "AgIAABIAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T05:54:36.338Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 56,
               "Title": "KudosMe.cs",
               "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\KudosMe.cs",
               "RelativeDocumentMoniker": "QQBot\\abilities\\KudosMe.cs",
@@ -778,18 +939,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T11:04:24.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Ping.cs",
-              "DocumentMoniker": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Ping.cs",
-              "RelativeDocumentMoniker": "QQBot\\abilities\\Ping.cs",
-              "ToolTip": "D:\\Chen\\Project\\CSharpProject\\QQBotCodePlugin\\QQBot\\abilities\\Ping.cs",
-              "RelativeToolTip": "QQBot\\abilities\\Ping.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvxIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T05:53:18.822Z"
             }
           ]
         }

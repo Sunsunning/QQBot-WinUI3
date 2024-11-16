@@ -30,6 +30,7 @@
                     <NavigationViewItem Icon="Message"  Content="控制台" Tag="Console" x:Name="ConsolePage"/>
                     <NavigationViewItem Icon="Add"  Content="添加机器人" Tag="AddBot" x:Name="AddBotPage"/>
                     <NavigationViewItem Icon="Library"  Content="机器人列表" Tag="BotList" x:Name="BotListPage"/>
+                    <NavigationViewItem Icon="Shop"  Content="插件商店" Tag="PluginStore" x:Name="PluginStorePage"/>
                 </NavigationView.MenuItems>
                 <Frame x:Name="PagesContent">
                     <Frame.ContentTransitions>

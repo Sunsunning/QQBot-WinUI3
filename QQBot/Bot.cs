@@ -25,6 +25,9 @@ namespace QQBotCodePlugin.QQBot
         private Logger Logger;
         private readonly string BotPath;
         private PluginHost plugin;
+        public long ReceivedCount { get; private set; } = 0;
+        public long ReceptionGroupMsgCount { get; private set; } = 0;
+        public long ReceptionPrivateMsgCount { get; private set; } = 0;
         public string serviceAddress { get; }
         public bool loadPlugin { get; }
         public HelpCommandHelper helpCommandHelper { get; }
@@ -112,6 +115,11 @@ namespace QQBotCodePlugin.QQBot
             }
         }
 
+        public long AddReceivedCount()
+        {
+            return ReceivedCount++;
+        }
+
         public async Task StartAsync()
         {
             try
@@ -159,10 +167,12 @@ namespace QQBotCodePlugin.QQBot
                         }
                         if (message.MessageType.Equals("group"))
                         {
+                            ReceptionGroupMsgCount++;
                             GroupReceived(this, message);
                         }
                         else
                         {
+                            ReceptionPrivateMsgCount++;
                             PrivateReceived(this, message);
                         }
 

@@ -10,6 +10,7 @@
 
     <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
         <StackPanel Spacing="5">
+            <!--为什么不写控件呢因为我懒!-->
             <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -30,6 +31,27 @@
                 </Grid>
             </Border>
 
+            <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Viewbox Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0">
+                            <FontIcon Glyph="&#xE8B9;"/>
+                        </Viewbox>
+                        <TextBlock Text="背景" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
+                        <TextBlock Text="让程序更耐看也更卡" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
+                    </Grid>
+
+                    <ComboBox x:Name="background" Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,15,0" SelectionChanged="background_SelectionChanged">
+                        <x:String>Acrylic(Thin)</x:String>
+                        <x:String>MicaAlt</x:String>
+                    </ComboBox>
+                </Grid>
+            </Border>
         </StackPanel>
     </ScrollViewer>
 </Page>

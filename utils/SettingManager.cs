@@ -15,7 +15,8 @@ namespace QQBotCodePlugin.utils
         {
             _settings = new Dictionary<string, object>
             {
-                { "QQBotPath", @"D:\QQBot"}
+                { "QQBotPath", @"D:\QQBot"},
+                { "BackGround","Acrylic(Thin)" }
             };
             _configFilePath = Path.Combine(Directory.GetCurrentDirectory(), ConfigFileName);
             EnsureConfigFileExists();

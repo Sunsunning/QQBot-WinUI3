@@ -36,6 +36,7 @@
     <None Remove="view\ConsolePage.xaml" />
     <None Remove="view\HomePage.xaml" />
     <None Remove="view\NotFoundPage.xaml" />
+    <None Remove="view\PluginStorePage.xaml" />
     <None Remove="view\SettingPage.xaml" />
   </ItemGroup>
 
@@ -77,6 +78,11 @@
     <Reference Include="IPlugin">
       <HintPath>..\IPlugin\bin\Release\IPlugin.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="view\PluginStorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="view\BotListPage.xaml">

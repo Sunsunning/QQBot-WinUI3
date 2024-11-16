@@ -14,10 +14,12 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
     {
         private readonly string _servicePrefix;
         private readonly HttpClient _httpClient;
+        private readonly Bot _bot;
         private IHttpService _httpService;
 
         public MessageService(string servicePrefix, StackPanel console, Bot bot)
         {
+            _bot = bot;
             _servicePrefix = servicePrefix;
             _httpClient = new HttpClient();
             _httpService = new HttpService(this._httpClient, console, bot);
@@ -25,6 +27,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendGroupDirectMessageAsync(long id, string message, bool autoEscape = false, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             using (HttpClient client = new HttpClient())
             {
                 var messageData = new JObject
@@ -50,6 +53,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendGroupMessageAsync(long id, long message_id, string message, bool autoEscape = false, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             using (HttpClient client = new HttpClient())
             {
                 var messageData = new JObject
@@ -83,7 +87,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendGroupImageMessageAsync(long groupId, long message_id, string url, string summary, bool sendToConsole = true)
         {
-
+            _bot.AddReceivedCount();
             var messageData = new JObject
             {
                 ["group_id"] = groupId,
@@ -116,6 +120,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendGroupVoiceMessageAsync(long groupId, string url, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             var messageData = new JObject
             {
                 ["group_id"] = groupId,
@@ -139,6 +144,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendGroupMessageAsync(long groupId, long message_id, string text, string imageUrl, long at_userId, string name, string summary, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             var messageData = new JObject
             {
                 ["group_id"] = groupId,
@@ -189,6 +195,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> sendLike(long user_id, int times, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             var messageData = new
             {
                 user_id = user_id,
@@ -201,6 +208,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendPrivateMesageDirectMessageAsync(long user_id, string message, bool autoEscape = false, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             using (HttpClient client = new HttpClient())
             {
                 var messageData = new JObject
@@ -226,6 +234,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendPrivateMessageAsync(long user_id, long message_id, string message, bool autoEscape = false, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             using (HttpClient client = new HttpClient())
             {
                 var messageData = new JObject
@@ -259,6 +268,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendPrivateImageMessageAsync(long user_id, long message_id, string url, string summary, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             var messageData = new JObject
             {
                 ["user_id"] = user_id,
@@ -291,6 +301,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendPrivateVoiceMessageAsync(long user_id, long url, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             var messageData = new JObject
             {
                 ["user_id"] = user_id,
@@ -314,6 +325,7 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendPrivateMessageAsync(long user_id, long message_id, string text, string imageUrl, long at_userId, string name, string summary, bool sendToConsole = true)
         {
+            _bot.AddReceivedCount();
             var messageData = new JObject
             {
                 ["user_id"] = user_id,

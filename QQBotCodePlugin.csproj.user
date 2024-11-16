@@ -19,6 +19,9 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="view\PluginStorePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="view\BotListPage.xaml">
       <SubType>Designer</SubType>
     </Page>

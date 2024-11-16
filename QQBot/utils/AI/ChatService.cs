@@ -69,7 +69,7 @@ namespace QQBotCodePlugin.QQBot.utils.AI
             };
 
             var content = new StringContent(json.ToString(), Encoding.UTF8, "application/json");
-            string response = await _httpService.SendHeaderPostRequestAsync(_url, content, null,_key, false);
+            string response = await _httpService.SendHeaderPostRequestAsync(_url, content, null, _key, false);
             string message = (string)JObject.Parse(response)["choices"][0]["message"]["content"];
             return message;
         }

@@ -21,7 +21,6 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
 
         public async Task<string> SendHeaderPostRequestAsync(string url, HttpContent content, Dictionary<string, string> headers = null, string authorizationToken = null, bool sendToConsole = true)
         {
-            logger.Debug(authorizationToken);
             try
             {
                 var request = new HttpRequestMessage(HttpMethod.Post, url);

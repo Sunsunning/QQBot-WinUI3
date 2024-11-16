@@ -22,6 +22,10 @@ namespace QQBotCodePlugin.QQBot
             this.info = info;
         }
 
+        public long getReceivedCount() => bot.ReceivedCount;
+        public long getReceptionGroupMsgCount() => bot.ReceptionGroupMsgCount;
+        public long getReceptionPrivateMsgCount() => bot.ReceptionPrivateMsgCount;
+
         public async void ReStart()
         {
             logger.Info($"正在重新启动机器人{info.BotName}");
@@ -117,6 +121,11 @@ namespace QQBotCodePlugin.QQBot
                 return;
             }
             await bot.Message.sendDirectMessage(id, message, autoEscape, sendToConsole);
+        }
+
+        public void sendLogger(string msg)
+        {
+            logger.Info(msg);
         }
     }
 }

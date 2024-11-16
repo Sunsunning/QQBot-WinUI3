@@ -17,6 +17,7 @@ namespace QQBotCodePlugin.view
     {
         private readonly SettingManager _settingManager;
         private readonly Dialog _dialog;
+        public static EventHandler<string> ChangeBackground;
         public SettingPage()
         {
             this.InitializeComponent();
@@ -30,6 +31,10 @@ namespace QQBotCodePlugin.view
             if (_settingManager.ContainsKey("QQBotPath") && !string.IsNullOrEmpty(_settingManager.GetValue<string>("QQBotPath")))
             {
                 DirectoryPath.Text = _settingManager.GetValue<string>("QQBotPath");
+            }
+            if (_settingManager.ContainsKey("BackGround") && !string.IsNullOrEmpty(_settingManager.GetValue<string>("BackGround")))
+            {
+                background.SelectedItem = _settingManager.GetValue<string>("BackGround");
             }
         }
 
@@ -49,6 +54,14 @@ namespace QQBotCodePlugin.view
                 _dialog.show("完成", $"成功设置目录为:\n{folder.Path}", "Ok", null, null, this.XamlRoot);
             }
 
+        }
+
+        private void background_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string background_item = _settingManager.GetValue<string>("BackGround");
+            if (background.SelectedValue.ToString() == background_item) return;
+            _settingManager.SetValue<string>("BackGround", background.SelectedValue.ToString());
+            ChangeBackground(this, background.SelectedValue.ToString());
         }
     }
 }

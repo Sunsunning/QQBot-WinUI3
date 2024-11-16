@@ -117,6 +117,21 @@ namespace QQBotCodePlugin.view
                 main.ReStart();
                 return;
             }
+            if (command.Equals("info"))
+            {
+                if (main == null)
+                {
+                    _dialog.show("错误", "QQBotMain实例为null无法显示机器人信息", "好的", null, null, this.XamlRoot);
+                    return;
+                }
+                long ReceivedCount = main.getReceivedCount();
+                long ReceptionGroupMsgCount = main.getReceptionGroupMsgCount();
+                long ReceptionPrivateMsgCount = main.getReceptionPrivateMsgCount();
+                main.sendLogger($"成功接收群聊消息:{ReceptionGroupMsgCount}");
+                main.sendLogger($"成功接收私聊消息:{ReceptionPrivateMsgCount}");
+                main.sendLogger($"成功回复:{ReceivedCount}");
+                return;
+            }
             _dialog.show("错误", $"未找到{command}命令", "好的", null, null, this.XamlRoot);
         }
 
@@ -156,7 +171,8 @@ namespace QQBotCodePlugin.view
             "stop",
             "clear",
             "send",
-            "restart"
+            "restart",
+            "info"
         };
 
     }
