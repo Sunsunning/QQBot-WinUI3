@@ -17,8 +17,8 @@
             <TextBox Name="BotName" Header="机器人名称" ToolTipService.ToolTip="便于启动机器人请填写"/>
             <TextBox Name="Description" Header="描述" ToolTipService.ToolTip="爱写不写"/>
             <TextBox Name="IP" Header="IP地址" Text="127.0.0.1"/>
-            <NumberBox Name="ServerPort" Header="服务监听端口" SpinButtonPlacementMode="Inline" Value="8080" Minimum="0" MaxHeight="65535"/>
-            <NumberBox Name="EventPort" Header="事件上报端口" SpinButtonPlacementMode="Inline" Value="3000" Minimum="0" Maximum="65535"/>
+            <NumberBox Name="ServerPort" Header="事件上报端口" SpinButtonPlacementMode="Inline" Value="8080" Minimum="0" MaxHeight="65535"/>
+            <NumberBox Name="EventPort" Header="服务监听端口" SpinButtonPlacementMode="Inline" Value="3000" Minimum="0" Maximum="65535"/>
             <TextBox Name="key" Header="GPT Key"></TextBox>
             
             <Button Name="Submit" Content="提交" Style="{StaticResource AccentButtonStyle}" Click="Submit_Click" Margin="0,10,0,0" HorizontalAlignment="Stretch"></Button>

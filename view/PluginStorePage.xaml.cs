@@ -34,9 +34,9 @@ namespace QQBotCodePlugin.view
         private readonly StackPanel stackPanel;
         private readonly List<string> Bots = new List<string>();
         private readonly Dialog dialog;
-        private readonly string get = "http://localhost:8010/get_plugins";
-        private readonly string upload = "http://localhost:8010/upload";
-        private readonly string download = "http://localhost:8010/download";
+        private readonly string get;
+        private readonly string upload;
+        private readonly string download;
         private string json = "";
 
 
@@ -46,6 +46,9 @@ namespace QQBotCodePlugin.view
             dialog = new Dialog();
             stackPanel = new StackPanel() { Spacing = 10 };
             settingManager = new SettingManager();
+            get = $"{settingManager.GetValue<string>("HTTP")}get_plugins";
+            upload = $"{settingManager.GetValue<string>("HTTP")}upload";
+            download = $"{settingManager.GetValue<string>("HTTP")}download";
             Bots = getBots();
             GetResponseAsync();
         }
@@ -243,7 +246,7 @@ namespace QQBotCodePlugin.view
                 Background = Application.Current.Resources["CardBackgroundFillColorDefault"] as SolidColorBrush,
                 CornerRadius = new CornerRadius(5),
                 MaxWidth = 300,
-                MaxHeight = 190,
+                MaxHeight = 170,
                 Margin = new Thickness(5)
             };
 

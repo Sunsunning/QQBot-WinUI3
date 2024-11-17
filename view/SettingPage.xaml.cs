@@ -36,6 +36,10 @@ namespace QQBotCodePlugin.view
             {
                 background.SelectedItem = _settingManager.GetValue<string>("BackGround");
             }
+            if (_settingManager.ContainsKey("HTTP") && !string.IsNullOrEmpty(_settingManager.GetValue<string>("HTTP")))
+            {
+                HTTP.Text = _settingManager.GetValue<string>("HTTP");
+            }
         }
 
         private async void SlecetedPath_Click(object sender, RoutedEventArgs e)
@@ -62,6 +66,15 @@ namespace QQBotCodePlugin.view
             if (background.SelectedValue.ToString() == background_item) return;
             _settingManager.SetValue<string>("BackGround", background.SelectedValue.ToString());
             ChangeBackground(this, background.SelectedValue.ToString());
+        }
+
+        private void HTTP_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (HTTP.Text.Equals(_settingManager.GetValue<string>("HTTP")))
+            {
+                return;
+            }
+            _settingManager.SetValue<string>("HTTP", HTTP.Text);
         }
     }
 }
