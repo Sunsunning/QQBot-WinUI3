@@ -23,6 +23,7 @@ namespace QQBotCodePlugin
         public MainWindow()
         {
             this.InitializeComponent();
+            m_configurationSource = new Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration();
             settingManager = new SettingManager();
             viewer.SelectedItem = HomePage;
             view.HomePage.NavigateToPageRequested += _homePage_SelectionFrame;
@@ -30,6 +31,7 @@ namespace QQBotCodePlugin
             view.SettingPage.ChangeBackground += _settingPage_ChangeBackground;
             Initialize();
         }
+
 
         public void _settingPage_ChangeBackground(object sender, string background)
         {
@@ -74,7 +76,6 @@ namespace QQBotCodePlugin
                 m_wsdqHelper.EnsureWindowsSystemDispatcherQueueController();
 
                 // Hooking up the policy object
-                m_configurationSource = new Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration();
                 this.Activated += Window_Activated;
                 this.Closed += Window_Closed;
                 ((FrameworkElement)this.Content).ActualThemeChanged += Window_ThemeChanged;

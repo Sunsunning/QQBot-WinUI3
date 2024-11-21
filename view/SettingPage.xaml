@@ -31,6 +31,8 @@
                 </Grid>
             </Border>
 
+          
+
             <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
                 <Grid>
                     <Grid.ColumnDefinitions>

@@ -16,6 +16,7 @@ namespace QQBotCodePlugin.utils
             _settings = new Dictionary<string, object>
             {
                 { "QQBotPath", @"D:\QQBot"},
+                { "Color","跟随系统" },
                 { "BackGround","Acrylic(Thin)" },
                 { "HTTP","http://valley.skyman.cloud/" }
             };

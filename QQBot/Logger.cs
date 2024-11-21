@@ -67,7 +67,6 @@ namespace QQBotCodePlugin.QQBot
             Run messageRun = new Run()
             {
                 Text = $" {message}",
-                Foreground = new SolidColorBrush(Colors.Black),
                 FontWeight = FontWeights.Medium,
                 FontSize = 15
             };

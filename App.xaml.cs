@@ -34,7 +34,7 @@ namespace QQBotCodePlugin
             this.Initialized();
             m_window = new MainWindow();
             var ScreenHeight = DisplayArea.Primary.WorkArea.Height;
-            m_window.AppWindow.MoveAndResize(new RectInt32(500, (int)(ScreenHeight - 40 - 700), 1011, 533));
+            m_window.AppWindow.MoveAndResize(new RectInt32(500, (int)(ScreenHeight - 40 - 700), 1011, 560));
             m_window.ExtendsContentIntoTitleBar = true;
             m_window.Activate();
         }
@@ -68,11 +68,11 @@ namespace QQBotCodePlugin
                     }
                 }
             }
-            catch (IOException ex)
+            catch (IOException)
             {
                 return;
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 return;
             }
