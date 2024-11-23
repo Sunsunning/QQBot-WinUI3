@@ -18,8 +18,8 @@ namespace QQBotCodePlugin.view
     /// </summary>
     public sealed partial class ConsolePage : Page
     {
-        private BotMain main;
         private Dialog _dialog;
+        private BotMain main;
         public static bool Running = false;
         public ConsolePage()
         {
@@ -34,7 +34,6 @@ namespace QQBotCodePlugin.view
             main = new BotMain(LogStackPanel, info);
             await main.RunBot();
         }
-
 
         private void send_Click(object sender, RoutedEventArgs e)
         {
@@ -70,7 +69,6 @@ namespace QQBotCodePlugin.view
                     _dialog.show("错误", "QQBotMain实例为null无法关闭", "好的", null, null, this.XamlRoot);
                     return;
                 }
-
                 main.StopBot();
                 main = null;
                 LogStackPanel.Children.Clear();
@@ -127,9 +125,7 @@ namespace QQBotCodePlugin.view
                 long ReceivedCount = main.getReceivedCount();
                 long ReceptionGroupMsgCount = main.getReceptionGroupMsgCount();
                 long ReceptionPrivateMsgCount = main.getReceptionPrivateMsgCount();
-                main.sendLogger($"成功接收群聊消息:{ReceptionGroupMsgCount}");
-                main.sendLogger($"成功接收私聊消息:{ReceptionPrivateMsgCount}");
-                main.sendLogger($"成功回复:{ReceivedCount}");
+                _dialog.show("数据", $"成功接收群聊消息:{ReceptionGroupMsgCount}\n成功接收私聊消息:{ReceptionPrivateMsgCount}\n成功回复:{ReceivedCount}", "好的", null, null, this.XamlRoot);
                 return;
             }
             _dialog.show("错误", $"未找到{command}命令", "好的", null, null, this.XamlRoot);

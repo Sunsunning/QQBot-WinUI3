@@ -128,6 +128,22 @@ namespace QQBotCodePlugin.view
             leftGrid.Children.Add(descriptionTextBlock);
             Grid.SetColumn(descriptionTextBlock, 0);
 
+            string p1 = Path.Combine(path, "plugins");
+            int c = 0;
+            if (Directory.Exists(p1)) c = Directory.GetFiles(path).Length;
+            TextBlock pluginCountTextBlock = new TextBlock
+            {
+                Text = $"²å¼þ:{c}",
+                FontSize = 12,
+                Foreground = new SolidColorBrush(Colors.Gray),
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+                VerticalAlignment = VerticalAlignment.Top,
+                Margin = new Thickness(50, 46, 0, 0),
+                Height = 17
+            };
+            leftGrid.Children.Add(pluginCountTextBlock);
+            Grid.SetColumn(pluginCountTextBlock, 0);
+
             StackPanel actionsStackPanel = new StackPanel
             {
                 Orientation = Orientation.Horizontal,

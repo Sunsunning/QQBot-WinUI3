@@ -4,6 +4,7 @@ using QQBotCodePlugin.QQBot.abilities.AI;
 using QQBotCodePlugin.QQBot.abilities.Memes;
 using QQBotCodePlugin.QQBot.utils.IServices;
 using QQBotCodePlugin.utils;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -21,6 +22,7 @@ namespace QQBotCodePlugin.QQBot
             _logStackPanel = logStackPanel;
             this.info = info;
         }
+
 
         public long getReceivedCount() => bot.ReceivedCount;
         public long getReceptionGroupMsgCount() => bot.ReceptionGroupMsgCount;
@@ -46,67 +48,13 @@ namespace QQBotCodePlugin.QQBot
             logger = new Logger(_logStackPanel, bot);
 
             logger.Info($"正在启动{info.BotName} 在 {info.IPAddress}:{info.ServerPort}与{info.IPAddress}:{info.EventPort}");
+            Dictionary<string, bool> eventHandlersConfig = info.EventData;
             List<IEventHandler> eventHandlers = new List<IEventHandler>();
-            foreach (var key in info.EventData)
+            foreach (var handlerConfig in eventHandlersConfig)
             {
-                if (key.Key == "ba" && key.Value == true)
+                if (handlerConfig.Value && eventHandlerTypes.ContainsKey(handlerConfig.Key))
                 {
-                    eventHandlers.Add(new ba());
-                }
-                if (key.Key == "cat" && key.Value == true)
-                {
-                    eventHandlers.Add(new CheshirePicture());
-                }
-                if (key.Key == "dragon" && key.Value == true)
-                {
-                    eventHandlers.Add(new DragonPicture());
-                }
-                if (key.Key == "eat" && key.Value == true)
-                {
-                    eventHandlers.Add(new eat());
-                }
-                if (key.Key == "play" && key.Value == true)
-                {
-                    eventHandlers.Add(new play());
-                }
-                if (key.Key == "AIChat" && key.Value == true)
-                {
-                    eventHandlers.Add(new AIChatGroup());
-                    eventHandlers.Add(new AIChatPrivate());
-                }
-                if (key.Key == "Help" && key.Value == true)
-                {
-                    eventHandlers.Add(new Help());
-                }
-                if (key.Key == "KudosMe" && key.Value == true)
-                {
-                    eventHandlers.Add(new KudosMe());
-                }
-                if (key.Key == "NumberBoom" && key.Value == true)
-                {
-                    eventHandlers.Add(new NumberBoom());
-                }
-                if (key.Key == "onset" && key.Value == true)
-                {
-                    eventHandlers.Add(new onset());
-                }
-                if (key.Key == "Ping" && key.Value == true)
-                {
-                    eventHandlers.Add(new abilities.Ping());
-                }
-                if (key.Key == "RunWindowsCommand" && key.Value == true)
-                {
-                    eventHandlers.Add(new RunWindowsCommand());
-                }
-
-                if (key.Key == "Sky" && key.Value == true)
-                {
-                    eventHandlers.Add(new SearchSky());
-                }
-
-                if (key.Key == "wife" && key.Value == true)
-                {
-                    eventHandlers.Add(new wife());
+                    eventHandlers.Add((IEventHandler)Activator.CreateInstance(eventHandlerTypes[handlerConfig.Key]));
                 }
             }
             bot.RegisterEventHandlers(eventHandlers);
@@ -123,9 +71,24 @@ namespace QQBotCodePlugin.QQBot
             await bot.Message.sendDirectMessage(id, message, autoEscape, sendToConsole);
         }
 
-        public void sendLogger(string msg)
+        private Dictionary<string, Type> eventHandlerTypes = new Dictionary<string, Type>
         {
-            logger.Info(msg);
-        }
+            { "ba", typeof(ba) },
+            { "cat", typeof(CheshirePicture) },
+            { "dragon", typeof(DragonPicture) },
+            { "eat", typeof(eat) },
+            { "play", typeof(play) },
+            { "AIChat", typeof(AIChatGroup) }, // 注意：这里假设 AIChatGroup 是第一个需要添加的
+            { "AIChatPrivate", typeof(AIChatPrivate) },
+            { "Help", typeof(Help) },
+            { "KudosMe", typeof(KudosMe) },
+            { "NumberBoom", typeof(NumberBoom) },
+            { "onset", typeof(onset) },
+            { "Ping", typeof(abilities.Ping) },
+            { "RunWindowsCommand", typeof(RunWindowsCommand) },
+            { "Sky", typeof(SearchSky) },
+            { "wife", typeof(wife) }
+        };
+
     }
 }

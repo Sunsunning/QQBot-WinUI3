@@ -25,13 +25,12 @@
                         <TextBlock Text="程序存放目录" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
                         <TextBlock Text="设置程序文件默认存放目录" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
                     </Grid>
-                    
+
                     <TextBox x:Name="DirectoryPath" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,120,0" Height="25" Width="190"></TextBox>
-                    <Button x:Name="SlecetedPath" Content="选择程序" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,15,0" Style="{StaticResource AccentButtonStyle}" Click="SlecetedPath_Click"></Button>
+                    <Button x:Name="SlecetedPath" Content="选择目录" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,15,0" Style="{StaticResource AccentButtonStyle}" Click="SlecetedPath_Click"></Button>
                 </Grid>
             </Border>
 
-          
 
             <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
                 <Grid>

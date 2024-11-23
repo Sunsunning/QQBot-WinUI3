@@ -40,7 +40,7 @@ namespace QQBotCodePlugin.QQBot.abilities
         private async void OnMessageReceived(object sender, MessageEvent e)
         {
             string message = e.Messages[0].Data.Text;
-            if (string.IsNullOrEmpty(message) || !(message.Equals("/今日老婆") || message.Equals("/离婚")))
+            if (string.IsNullOrEmpty(message) || !(message.Equals("/今日老婆")))
             {
                 return;
             }

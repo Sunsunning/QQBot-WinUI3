@@ -104,7 +104,7 @@ namespace QQBotCodePlugin.QQBot
                 {
                     try
                     {
-                        File.Create(path);
+                        using (FileStream fs = File.Create(path)) { }
                         Logger.Info($"正在创建{path}");
                     }
                     catch (Exception ex)

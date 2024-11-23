@@ -56,6 +56,7 @@ namespace QQBotCodePlugin.QQBot.abilities
                     {
                         foreach (var des in plugin.description())
                         {
+                            if (des == null) continue;
                             commands.Add(des);
                         }
                     }
