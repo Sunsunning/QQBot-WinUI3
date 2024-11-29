@@ -80,7 +80,14 @@ namespace QQBotCodePlugin.QQBot
 
         private void Initialized()
         {
-
+            if (Directory.Exists(this.getImage()))
+            {
+                string[] files = Directory.GetFiles(this.getImage());
+                foreach (string file in files)
+                {
+                    File.Delete(file);
+                }
+            }
             foreach (var name in folders)
             {
                 string path = Path.Combine(BotPath, name);
@@ -227,6 +234,11 @@ namespace QQBotCodePlugin.QQBot
                 _listener = null;
                 Logger.Info("HTTP listener resources released.");
                 ConsolePage.Running = false;
+                string[] files = Directory.GetFiles(this.getImage());
+                foreach (string file in files)
+                {
+                    File.Delete(file);
+                }
             }
         }
 

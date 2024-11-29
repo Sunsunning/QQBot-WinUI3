@@ -15,6 +15,7 @@
     {
         public Meme Meme { get; set; }
         public bool AIChat { get; set; }
+        public bool AIChatPrivate { get; set; }
         public bool Help { get; set; }
         public bool KudosMe { get; set; }
         public bool NumberBoom { get; set; }

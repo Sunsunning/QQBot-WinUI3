@@ -31,6 +31,7 @@
               Checked="OptionsAllCheckBox_Checked"  Unchecked="OptionsAllCheckBox_Unchecked"/>
                 <CheckBox x:Name="Plugin" Content="使用插件" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
                 <CheckBox x:Name="AIChat" Content="ChatGPT聊天" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
+                <CheckBox x:Name="AIChatPrivate" Content="ChatGPT聊天(私)" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
                 <CheckBox x:Name="Help" Content="帮助" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
                 <CheckBox x:Name="KudosMe" Content="赞我" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
                 <CheckBox x:Name="NumberBoom" Content="数字炸弹" Margin="24,0,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>

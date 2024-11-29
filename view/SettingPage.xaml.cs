@@ -40,6 +40,10 @@ namespace QQBotCodePlugin.view
             {
                 HTTP.Text = _settingManager.GetValue<string>("HTTP");
             }
+            if (_settingManager.ContainsKey("ChromePath") && !string.IsNullOrEmpty(_settingManager.GetValue<string>("ChromePath")))
+            {
+                ChromePath.Text = _settingManager.GetValue<string>("ChromePath");
+            }
         }
 
         private async void SlecetedPath_Click(object sender, RoutedEventArgs e)
@@ -55,7 +59,7 @@ namespace QQBotCodePlugin.view
             {
                 _settingManager.SetValue("QQBotPath", folder.Path);
                 DirectoryPath.Text = folder.Path;
-                _dialog.show("Íê³É", $"³É¹¦ÉèÖÃÄ¿Â¼Îª:\n{folder.Path}", "Ok", null, null, this.XamlRoot);
+                _dialog.show("å®Œæˆ", $"æˆåŠŸè®¾ç½®ç›®å½•ä¸º:\n{folder.Path}", "Ok", null, null, this.XamlRoot);
             }
 
         }
@@ -75,6 +79,15 @@ namespace QQBotCodePlugin.view
                 return;
             }
             _settingManager.SetValue<string>("HTTP", HTTP.Text);
+        }
+
+        private void ChromePath_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (ChromePath.Text.Equals(_settingManager.GetValue<string>("ChromePath")))
+            {
+                return;
+            }
+            _settingManager.SetValue<string>("ChromePath", ChromePath.Text);
         }
     }
 }

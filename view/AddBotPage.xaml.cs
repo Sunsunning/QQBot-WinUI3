@@ -29,12 +29,12 @@ namespace QQBotCodePlugin.view
 
         private void OptionsAllCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = wife.IsChecked = true;
+            AIChatPrivate.IsChecked = Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = wife.IsChecked = true;
         }
 
         private void OptionsAllCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = wife.IsChecked = false;
+            AIChatPrivate.IsChecked = Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = wife.IsChecked = false;
         }
 
         private void AreAllAbilitiesSelected()
@@ -47,6 +47,7 @@ namespace QQBotCodePlugin.view
             if (eat.IsChecked == true) checkedCount++;
             if (play.IsChecked == true) checkedCount++;
             if (AIChat.IsChecked == true) checkedCount++;
+            if (AIChatPrivate.IsChecked == true) checkedCount++;
             if (Help.IsChecked == true) checkedCount++;
             if (KudosMe.IsChecked == true) checkedCount++;
             if (NumberBoom.IsChecked == true) checkedCount++;
@@ -56,7 +57,7 @@ namespace QQBotCodePlugin.view
             if (Sky.IsChecked == true) checkedCount++;
             if (wife.IsChecked == true) checkedCount++;
 
-            if (checkedCount == 15)
+            if (checkedCount == 16)
             {
                 OptionsAllCheckBox.IsChecked = true;
             }
@@ -152,6 +153,7 @@ namespace QQBotCodePlugin.view
                         ["eat"] = eat.IsChecked,
                         ["play"] = play.IsChecked,
                     },
+                    ["AIChatPrivate"] = AIChat.IsChecked,
                     ["AIChat"] = AIChat.IsChecked,
                     ["Help"] = Help.IsChecked,
                     ["KudosMe"] = KudosMe.IsChecked,

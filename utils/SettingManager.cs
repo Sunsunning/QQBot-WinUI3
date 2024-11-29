@@ -18,7 +18,8 @@ namespace QQBotCodePlugin.utils
                 { "QQBotPath", @"D:\QQBot"},
                 { "Color","跟随系统" },
                 { "BackGround","Acrylic(Thin)" },
-                { "HTTP","http://valley.skyman.cloud/" }
+                { "HTTP","http://valley.skyman.cloud/" },
+                { "ChromePath",@"C:\Program Files\Google\Chrome\Application\chrome.exe" }
             };
             _configFilePath = Path.Combine(Directory.GetCurrentDirectory(), ConfigFileName);
             EnsureConfigFileExists();

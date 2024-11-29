@@ -130,7 +130,7 @@ namespace QQBotCodePlugin.view
 
             string p1 = Path.Combine(path, "plugins");
             int c = 0;
-            if (Directory.Exists(p1)) c = Directory.GetFiles(path).Length;
+            if (Directory.Exists(p1)) c = Directory.GetFiles(path,"*.dll", SearchOption.AllDirectories).Length;
             TextBlock pluginCountTextBlock = new TextBlock
             {
                 Text = $"²å¼þ:{c}",
@@ -242,6 +242,7 @@ namespace QQBotCodePlugin.view
                     { "eat",botConfig.Abilities.Meme.Eat },
                     { "play",botConfig.Abilities.Meme.Play },
                     { "AIChat",botConfig.Abilities.AIChat },
+                    { "AIChatPrivate",botConfig.Abilities.AIChatPrivate },
                     { "Help",botConfig.Abilities.Help },
                     { "KudosMe",botConfig.Abilities.KudosMe },
                     { "NumberBoom",botConfig.Abilities.NumberBoom },
