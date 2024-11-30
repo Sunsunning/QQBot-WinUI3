@@ -60,6 +60,7 @@ namespace QQBotCodePlugin.view
                 _settingManager.SetValue("QQBotPath", folder.Path);
                 DirectoryPath.Text = folder.Path;
                 _dialog.show("完成", $"成功设置目录为:\n{folder.Path}", "Ok", null, null, this.XamlRoot);
+                _settingManager.InitializeFolder();
             }
 
         }
@@ -88,6 +89,12 @@ namespace QQBotCodePlugin.view
                 return;
             }
             _settingManager.SetValue<string>("ChromePath", ChromePath.Text);
+        }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            _settingManager.ResetSettings();
+            Initialize();
         }
     }
 }

@@ -9,88 +9,92 @@
     mc:Ignorable="d">
 
     <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-        <StackPanel Spacing="5">
-            <!--为什么不写控件呢因为我懒!-->
-            <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+        <Grid>
+            <StackPanel Spacing="5">
+                <!--为什么不写控件呢因为我懒!-->
+                <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Column="0">
-                        <Viewbox Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0">
-                            <FontIcon Glyph="&#xEC50;"/>
-                        </Viewbox>
-                        <TextBlock Text="程序存放目录" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
-                        <TextBlock Text="设置程序文件默认存放目录" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
+                        <Grid Grid.Column="0">
+                            <Viewbox Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0">
+                                <FontIcon Glyph="&#xEC50;"/>
+                            </Viewbox>
+                            <TextBlock Text="程序存放目录" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
+                            <TextBlock Text="设置程序文件默认存放目录" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
+                        </Grid>
+
+                        <TextBox x:Name="DirectoryPath" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,120,0" Height="25" Width="190"></TextBox>
+                        <Button x:Name="SlecetedPath" Content="选择目录" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,15,0" Style="{StaticResource AccentButtonStyle}" Click="SlecetedPath_Click"></Button>
                     </Grid>
-
-                    <TextBox x:Name="DirectoryPath" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,120,0" Height="25" Width="190"></TextBox>
-                    <Button x:Name="SlecetedPath" Content="选择目录" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,15,0" Style="{StaticResource AccentButtonStyle}" Click="SlecetedPath_Click"></Button>
-                </Grid>
-            </Border>
+                </Border>
 
 
-            <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Column="0">
-                        <Viewbox Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0">
-                            <FontIcon Glyph="&#xE8B9;"/>
-                        </Viewbox>
-                        <TextBlock Text="背景" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
-                        <TextBlock Text="让程序更耐看也更卡" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
+                        <Grid Grid.Column="0">
+                            <Viewbox Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0">
+                                <FontIcon Glyph="&#xE8B9;"/>
+                            </Viewbox>
+                            <TextBlock Text="背景" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
+                            <TextBlock Text="让程序更耐看也更卡" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
+                        </Grid>
+
+                        <ComboBox x:Name="background" Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,15,0" SelectionChanged="background_SelectionChanged">
+                            <x:String>Acrylic(Thin)</x:String>
+                            <x:String>MicaAlt</x:String>
+                        </ComboBox>
                     </Grid>
+                </Border>
 
-                    <ComboBox x:Name="background" Grid.Column="1" HorizontalAlignment="Right" Margin="0,20,15,0" SelectionChanged="background_SelectionChanged">
-                        <x:String>Acrylic(Thin)</x:String>
-                        <x:String>MicaAlt</x:String>
-                    </ComboBox>
-                </Grid>
-            </Border>
+                <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-            <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Viewbox Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0">
+                                <FontIcon Glyph="&#xE719;"/>
+                            </Viewbox>
+                            <TextBlock Text="插件商店请求地址" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
+                            <TextBlock Text="无需必要请不要更改" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
+                        </Grid>
 
-                    <Grid Grid.Column="0">
-                        <Viewbox Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0">
-                            <FontIcon Glyph="&#xE719;"/>
-                        </Viewbox>
-                        <TextBlock Text="插件商店请求地址" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
-                        <TextBlock Text="无需必要请不要更改" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
+                        <TextBox x:Name="HTTP" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,10,0" Height="25" Width="190" TextChanged="HTTP_TextChanged"></TextBox>
                     </Grid>
+                </Border>
 
-                    <TextBox x:Name="HTTP" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,10,0" Height="25" Width="190" TextChanged="HTTP_TextChanged"></TextBox>
-                </Grid>
-            </Border>
-            
-            <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                <Border Background="{StaticResource CardBackgroundFillColorDefaultBrush}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="56,5,36,0" Height="67" CornerRadius="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Column="0">
-                        <Viewbox Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0">
-                            <FontIcon Glyph="&#xEB41;"/>
-                        </Viewbox>
-                        <TextBlock Text="Google Chrome程序路径" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
-                        <TextBlock Text="今日老婆功能基于PuppeteerSharp实现故需要Google Chrome" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
+                        <Grid Grid.Column="0">
+                            <Viewbox Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,0">
+                                <FontIcon Glyph="&#xEB41;"/>
+                            </Viewbox>
+                            <TextBlock Text="Google Chrome程序路径" FontSize="15" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,15,0,0"/>
+                            <TextBlock Text="今日老婆功能基于PuppeteerSharp实现故需要Google Chrome" FontSize="12" Foreground="Gray" Grid.Column="0" HorizontalAlignment="Stretch" Margin="50,32,0,0" Height="17" VerticalAlignment="Top"/>
+                        </Grid>
+
+                        <TextBox x:Name="ChromePath" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,10,0" Height="25" Width="190" TextChanged="ChromePath_TextChanged"></TextBox>
                     </Grid>
-
-                    <TextBox x:Name="ChromePath" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,10,0" Height="25" Width="190" TextChanged="ChromePath_TextChanged"></TextBox>
-                </Grid>
-            </Border>
-        </StackPanel>
+                </Border>
+            </StackPanel>
+            <HyperlinkButton Content="重置设置" Click="HyperlinkButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"></HyperlinkButton>
+        </Grid>
+        
     </ScrollViewer>
 </Page>

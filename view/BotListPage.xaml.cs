@@ -130,7 +130,7 @@ namespace QQBotCodePlugin.view
 
             string p1 = Path.Combine(path, "plugins");
             int c = 0;
-            if (Directory.Exists(p1)) c = Directory.GetFiles(path,"*.dll", SearchOption.AllDirectories).Length;
+            if (Directory.Exists(p1)) c = Directory.GetFiles(path, "*.dll", SearchOption.AllDirectories).Length;
             TextBlock pluginCountTextBlock = new TextBlock
             {
                 Text = $"²å¼þ:{c}",

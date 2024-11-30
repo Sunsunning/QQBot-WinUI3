@@ -10,21 +10,64 @@ namespace QQBotCodePlugin.utils
         private const string ConfigFileName = "config.qq";
         private Dictionary<string, object> _settings;
         private string _configFilePath;
-
-        public SettingManager()
-        {
-            _settings = new Dictionary<string, object>
+        private readonly Dictionary<string, object> rawdata = new Dictionary<string, object>
             {
                 { "QQBotPath", @"D:\QQBot"},
-                { "Color","跟随系统" },
                 { "BackGround","Acrylic(Thin)" },
                 { "HTTP","http://valley.skyman.cloud/" },
                 { "ChromePath",@"C:\Program Files\Google\Chrome\Application\chrome.exe" }
             };
+        private List<string> folders = new List<string>() { "Bots" };
+        private List<string> files = new List<string>();
+
+        public SettingManager()
+        {
+            _settings = new Dictionary<string, object>(rawdata);
             _configFilePath = Path.Combine(Directory.GetCurrentDirectory(), ConfigFileName);
             EnsureConfigFileExists();
             LoadSettings();
         }
+
+        public void InitializeFolder()
+        {
+            string RootPath = this.GetValue<string>("QQBotPath");
+            if (string.IsNullOrEmpty(RootPath))
+            {
+                return;
+            }
+            if (!Directory.Exists(RootPath))
+            {
+                Directory.CreateDirectory(RootPath);
+            }
+            try
+            {
+                foreach (var folder in folders)
+                {
+                    string path = Path.Combine(RootPath, folder);
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                }
+                foreach (var file in files)
+                {
+                    string path = Path.Combine(RootPath, file);
+                    if (!File.Exists(path))
+                    {
+                        File.Create(path);
+                    }
+                }
+            }
+            catch (IOException)
+            {
+                return;
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
+
 
         private void EnsureConfigFileExists()
         {
@@ -38,6 +81,12 @@ namespace QQBotCodePlugin.utils
                     }
                 }
             }
+        }
+
+        public void ResetSettings()
+        {
+            _settings = new Dictionary<string, object>(rawdata);
+            SaveSettings();
         }
 
         public void LoadSettings()

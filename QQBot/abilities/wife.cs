@@ -1,6 +1,4 @@
-﻿using ABI.System;
-using Microsoft.UI.Xaml;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using PuppeteerSharp;
 using QQBotCodePlugin.QQBot.utils.IServices;
 using QQBotCodePlugin.QQBot.utils.Json;
@@ -112,12 +110,12 @@ namespace QQBotCodePlugin.QQBot.abilities
             return str;
         }
 
-        private async Task<string> RenderHtmlToImageAsync(string avatar,string content, string outputFile)
+        private async Task<string> RenderHtmlToImageAsync(string avatar, string content, string outputFile)
         {
+            if (string.IsNullOrEmpty(avatar) || string.IsNullOrEmpty(ChromePath)) return null;
             string html = $"<html style=\"background: rgba(255, 255, 255, 0.6)\">\r\n    <head>\r\n    <style>\r\n    html, body {{\r\n        margin: 0;\r\n        padding: 0;\r\n    }}        \r\n    </style>\r\n    </head>\r\n    <div class=\"fortune\" style=\"width: 30%; height: 65rem; float: left; text-align: center; background: rgba(255, 255, 255, 0.6);\">\r\n    <h2>今日老婆</h2>\r\n    <br>\r\n    <div class=\"content\" style=\"margin: 0 auto; padding: 12px 12px; height: 49rem; max-width: 980px; max-height: 1024px; background: rgba(255, 255, 255, 0.6); border-radius: 15px; backdrop-filter: blur(3px); box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); writing-mode: vertical-rl; text-orientation: mixed;\">\r\n        <p style=\"font-size: 2em\">{content}</p>\r\n    </div>\r\n    <br>\r\n    <br>\r\n    <br>\r\n    <p>HTML and Content From Logier-Plugin </p>\r\n    </div>\r\n    <div class=\"image\" style=\"height:65rem; width: 70%; float: right; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); text-align: center;\">\r\n    <img src={avatar} style=\"height: 100%; filter: brightness(100%); overflow: hidden; display: inline-block; vertical-align: middle; margin: 0; padding: 0;\"/>\r\n    </div>\r\n    </html>";
 
-            if (string.IsNullOrEmpty(avatar) || string.IsNullOrEmpty(ChromePath)) return null; 
-            var browser = await Puppeteer.LaunchAsync(new LaunchOptions { Headless = true, ExecutablePath = ChromePath});
+            var browser = await Puppeteer.LaunchAsync(new LaunchOptions { Headless = true, ExecutablePath = ChromePath });
             var page = await browser.NewPageAsync();
 
             await page.SetViewportAsync(new ViewPortOptions
@@ -138,7 +136,7 @@ namespace QQBotCodePlugin.QQBot.abilities
             return outputFile;
         }
 
-        private List<string> content = new List<string>() {  
+        private List<string> content = new List<string>() {
         "百年推甲子，福地在春申",
         "红毹拥出态娇妍，璧合珠联看并肩",
         "锦堂此夜春如海，瑞兆其昌五世绵",

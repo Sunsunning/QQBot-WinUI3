@@ -30,7 +30,10 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
             string filePath = Path.Combine(folderPath, FileName);
             if (!File.Exists(filePath))
             {
-                File.Create(filePath);
+                using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                {
+
+                }
             }
         }
 

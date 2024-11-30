@@ -78,7 +78,7 @@ namespace QQBotCodePlugin.QQBot
             plugin.LoadPlugins(getPlugins());
         }
 
-        private void Initialized()
+        private void DeleteImage()
         {
             if (Directory.Exists(this.getImage()))
             {
@@ -88,6 +88,11 @@ namespace QQBotCodePlugin.QQBot
                     File.Delete(file);
                 }
             }
+        }
+
+        private void Initialized()
+        {
+            DeleteImage();
             foreach (var name in folders)
             {
                 string path = Path.Combine(BotPath, name);
@@ -234,11 +239,7 @@ namespace QQBotCodePlugin.QQBot
                 _listener = null;
                 Logger.Info("HTTP listener resources released.");
                 ConsolePage.Running = false;
-                string[] files = Directory.GetFiles(this.getImage());
-                foreach (string file in files)
-                {
-                    File.Delete(file);
-                }
+                DeleteImage();
             }
         }
 
