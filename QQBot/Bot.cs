@@ -5,6 +5,7 @@ using QQBotCodePlugin.QQBot.abilities.utils;
 using QQBotCodePlugin.QQBot.utils;
 using QQBotCodePlugin.QQBot.utils.IServices;
 using QQBotCodePlugin.QQBot.utils.QQ;
+using QQBotCodePlugin.utils;
 using QQBotCodePlugin.view;
 using System;
 using System.Collections.Generic;
@@ -21,36 +22,38 @@ namespace QQBotCodePlugin.QQBot
         private HttpListener _listener;
         private int _port;
         private string _ip;
+        private RunBotInfo _info;
         private StackPanel _console;
         private Logger Logger;
-        private readonly string BotPath;
         private PluginHost plugin;
-        public long ReceivedCount { get; private set; } = 0;
-        public long ReceptionGroupMsgCount { get; private set; } = 0;
-        public long ReceptionPrivateMsgCount { get; private set; } = 0;
         public string serviceAddress { get; }
         public bool loadPlugin { get; }
+        private readonly string BotPath;
         public HelpCommandHelper helpCommandHelper { get; }
         public IConfigService configService { get; }
         public MessageService Service { get; }
         public Message Message { get; }
-        public event EventHandler<MessageEvent> PrivateReceived;
-        public event EventHandler<MessageEvent> GroupReceived;
         private List<string> folders = new List<string> { "images", "logs", "config", "temp", "plugins" };
         private List<string> files = new List<string> { ".wife" };
+        public event EventHandler<MessageEvent> PrivateReceived;
+        public event EventHandler<MessageEvent> GroupReceived;
+        public long ReceivedCount { get; private set; } = 0;
+        public long ReceptionGroupMsgCount { get; private set; } = 0;
+        public long ReceptionPrivateMsgCount { get; private set; } = 0;
 
-        public Bot(string ip, int port, int serviceport, string BotPath, StackPanel console, bool loadPlugin = false)
+        public Bot(RunBotInfo info, StackPanel console, bool loadPlugin = false)
         {
             helpCommandHelper = new HelpCommandHelper();
             this.loadPlugin = loadPlugin;
-            _ip = ip;
-            _port = port;
+            _ip = info.IPAddress ;
+            _port = info.ServerPort;
             _console = console;
-            this.BotPath = BotPath;
+            _info = info;
+            BotPath = info.BotPath;
             Logger = new Logger(console, this);
             _listener = new HttpListener();
-            _listener.Prefixes.Add($"http://{_ip}:{port}/");
-            serviceAddress = $"http://{_ip}:{serviceport}/";
+            _listener.Prefixes.Add($"http://{_ip}:{_port}/");
+            serviceAddress = $"http://{_ip}:{info.EventPort}/";
             Service = new MessageService(serviceAddress, console, this);
             Message = new Message(Service);
             configService = new ConfigService(getPlugins());
@@ -61,6 +64,7 @@ namespace QQBotCodePlugin.QQBot
         public List<IPlugin> GetPluginsList() => plugin.GetPlugins();
         public StackPanel getConsole() => _console;
         public Logger getLogger() => Logger;
+        public RunBotInfo GetRunBotInfo() => _info;
         public string getImage() => Path.Combine(BotPath, "images");
         public string getConfig() => Path.Combine(BotPath, "config");
         public string getLogs() => Path.Combine(BotPath, "logs");
@@ -170,7 +174,7 @@ namespace QQBotCodePlugin.QQBot
                     using (var reader = new System.IO.StreamReader(context.Request.InputStream, context.Request.ContentEncoding))
                     {
                         string json = await reader.ReadToEndAsync();
-                        Logger.Debug(json);
+                        // Logger.Debug(json);
                         MessageEvent message = new ParseJson(json, _console, this).Get();
 
                         if (message.MessageType == null)
@@ -179,11 +183,13 @@ namespace QQBotCodePlugin.QQBot
                         }
                         if (message.MessageType.Equals("group"))
                         {
+                            Logger.Info($"[{message.GroupId}] {message.Sender.Nickname}: {message.RawMessage}");
                             ReceptionGroupMsgCount++;
                             GroupReceived(this, message);
                         }
                         else
                         {
+                            Logger.Info($"[{message.Sender.UserId}] {message.Sender.Nickname}: {message.RawMessage}");
                             ReceptionPrivateMsgCount++;
                             PrivateReceived(this, message);
                         }

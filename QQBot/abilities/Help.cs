@@ -39,7 +39,7 @@ namespace QQBotCodePlugin.QQBot.abilities
             }
             if (commands.Count == 0)
             {
-                commands.Add("----------------命令列表----------------\n");
+                commands.Add($"----------------{bot.GetRunBotInfo().BotName}の帮助----------------\n");
                 foreach (var header in bot.helpCommandHelper.commands.Keys)
                 {
                     commands.Add($"- {header}:");
@@ -61,9 +61,10 @@ namespace QQBotCodePlugin.QQBot.abilities
                         }
                     }
                 }
+                commands.Add("");
                 commands.Add("- QQBotManager项目地址");
-                commands.Add("github: 不告诉你");
-                commands.Add("gitee: 不告诉你");
+                commands.Add("github: https://github.com/Sunsunning/QQBot-WinUI3");
+                commands.Add("gitee: https://gitee.com/chuan_yu/qqbot-win-ui");
                 commands.Add("----------------命令列表----------------");
             }
 

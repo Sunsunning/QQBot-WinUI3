@@ -44,7 +44,7 @@ namespace QQBotCodePlugin.QQBot
 
         public async Task RunBot()
         {
-            bot = new Bot(info.IPAddress, info.ServerPort, info.EventPort, info.BotPath, _logStackPanel, info.Plugin);
+            bot = new Bot(info, _logStackPanel, info.Plugin);
             logger = new Logger(_logStackPanel, bot);
 
             logger.Info($"正在启动{info.BotName} 在 {info.IPAddress}:{info.ServerPort}与{info.IPAddress}:{info.EventPort}");
