@@ -92,6 +92,7 @@ namespace QQBotCodePlugin.QQBot.abilities
         {
             if (minValue >= maxValue)
             {
+                App.GetAppLogger().Log($"随机数最小值必须小于最大值", false);
                 throw new ArgumentException("最小值必须小于最大值");
             }
             return _random.Next(minValue, maxValue);

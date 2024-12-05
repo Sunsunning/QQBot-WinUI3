@@ -16,6 +16,7 @@ namespace QQBotCodePlugin.QQBot.utils
             }
             catch (JsonException ex)
             {
+                App.GetAppLogger().Log($"Error: {ex.Message}", false);
                 new Logger(console, bot).Error($"发生错误:{ex.Message}");
                 messageEvent = null;
             }

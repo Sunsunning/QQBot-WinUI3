@@ -125,10 +125,12 @@ namespace QQBotCodePlugin.view
             }
             catch (UnauthorizedAccessException ex)
             {
+                App.GetAppLogger().Log($"Error: {ex.Message}", false);
                 _dialog.show("错误", $"没有权限访问:\n{ex.Message}", "好的", null, null, this.XamlRoot);
             }
             catch (Exception ex)
             {
+                App.GetAppLogger().Log($"Error: {ex.Message}", false);
                 _dialog.show("错误", $"出现错误:\n{ex.Message}", "好的", null, null, this.XamlRoot);
             }
         }

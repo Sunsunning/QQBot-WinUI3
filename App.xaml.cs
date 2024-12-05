@@ -1,6 +1,9 @@
 ﻿using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using QQBotCodePlugin.utils;
+using System.Diagnostics;
+using System.IO;
+using System.Threading.Tasks;
 using Windows.Graphics;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -34,10 +37,21 @@ namespace QQBotCodePlugin
             m_window.ExtendsContentIntoTitleBar = true;
             m_window.Activate();
             manager.InitializeFolder();
+            appLogger = new AppLogger(Path.Combine(manager.GetValue<string>("QQBotPath"), "logs"));
+            TaskScheduler.UnobservedTaskException += (sender, args) =>
+            {
+                StackTrace stackTrace = new StackTrace(args.Exception, true);
+                appLogger.Log(args.Exception.Message,true,stackTrace);
+                args.SetObserved();
+            };
+            appLogger.Log("MainWindow Initialized Successfully!");
+            appLogger.Log("Application Launched and Initialized Successfully!");
         }
 
-        public static Window GetMainWindow() => m_window;
         private SettingManager manager = new SettingManager();
+        public static AppLogger appLogger { get; set; }
+        public static AppLogger GetAppLogger() => appLogger;
+        public static Window GetMainWindow() => m_window;
         private static Window m_window;
     }
 }

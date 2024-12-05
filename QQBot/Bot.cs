@@ -1,4 +1,5 @@
 ﻿using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Shapes;
 using Newtonsoft.Json.Linq;
 using QQBotCodePlugin.Plugin;
 using QQBotCodePlugin.QQBot.abilities.utils;
@@ -59,20 +60,21 @@ namespace QQBotCodePlugin.QQBot
             configService = new ConfigService(getPlugins());
             Initialized();
             if (loadPlugin) LoadingPlugin();
+            App.GetAppLogger().Log($"机器人初始化成功");
         }
 
         public List<IPlugin> GetPluginsList() => plugin.GetPlugins();
         public StackPanel getConsole() => _console;
         public Logger getLogger() => Logger;
         public RunBotInfo GetRunBotInfo() => _info;
-        public string getImage() => Path.Combine(BotPath, "images");
-        public string getConfig() => Path.Combine(BotPath, "config");
-        public string getLogs() => Path.Combine(BotPath, "logs");
-        public string getTemp() => Path.Combine(BotPath, "temp");
-        public string getPlugins() => Path.Combine(BotPath, "plugins");
+        public string getImage() => System.IO.Path.Combine(BotPath, "images");
+        public string getConfig() => System.IO.Path.Combine(BotPath, "config");
+        public string getLogs() => System.IO.Path.Combine(BotPath, "logs");
+        public string getTemp() => System.IO.Path.Combine(BotPath, "temp");
+        public string getPlugins() => System.IO.Path.Combine(BotPath, "plugins");
         public string getGPTKey()
         {
-            string json = File.ReadAllText(Path.Combine(BotPath, "bot.json"));
+            string json = File.ReadAllText(System.IO.Path.Combine(BotPath, "bot.json"));
             return (string)JObject.Parse(json)["key"];
         }
 
@@ -80,6 +82,7 @@ namespace QQBotCodePlugin.QQBot
         {
             plugin = new PluginHost(Logger, this);
             plugin.LoadPlugins(getPlugins());
+            App.GetAppLogger().Log($"机器人成功完成加载插件任务");
         }
 
         private void DeleteImage()
@@ -99,7 +102,7 @@ namespace QQBotCodePlugin.QQBot
             DeleteImage();
             foreach (var name in folders)
             {
-                string path = Path.Combine(BotPath, name);
+                string path = System.IO.Path.Combine(BotPath, name);
                 if (!Directory.Exists(path))
                 {
                     try
@@ -109,13 +112,14 @@ namespace QQBotCodePlugin.QQBot
                     }
                     catch (Exception ex)
                     {
+                        App.GetAppLogger().Log($"创建文件夹{path}失败:{ex.Message}", false);
                         Logger.Error($"创建文件夹{path}失败:{ex.Message}");
                     }
                 }
             }
             foreach (var name in files)
             {
-                string path = Path.Combine(this.getConfig(), name);
+                string path = System.IO.Path.Combine(this.getConfig(), name);
                 if (!File.Exists(path))
                 {
                     try
@@ -125,6 +129,7 @@ namespace QQBotCodePlugin.QQBot
                     }
                     catch (Exception ex)
                     {
+                        App.GetAppLogger().Log($"创建文件{path}失败:{ex.Message}", false);
                         Logger.Error($"创建文件{path}失败:{ex.Message}");
                     }
                 }
@@ -140,9 +145,11 @@ namespace QQBotCodePlugin.QQBot
         {
             try
             {
+                App.GetAppLogger().Log($"正在开启HTTP Listener服务");
                 _listener.Start();
                 Logger.Info($"正在监听{_ip}:{_port}...");
                 Logger.Info($"机器人启动成功");
+                App.GetAppLogger().Log($"成功开启HTTP Listener服务");
                 ConsolePage.Running = true;
 
                 while (true)
@@ -153,7 +160,11 @@ namespace QQBotCodePlugin.QQBot
             }
             catch (HttpListenerException ex)
             {
+                App.GetAppLogger().Log($"Error:{ex.Message}", false);
                 Logger.Error("发生错误:" + ex.Message);
+            }catch (Exception ex)
+            {
+                App.GetAppLogger().Log($"Error:{ex.Message}", false);
             }
         }
 
@@ -236,6 +247,7 @@ namespace QQBotCodePlugin.QQBot
             }
             catch (ObjectDisposedException ex)
             {
+                App.GetAppLogger().Log($"HTTP listener has been disposed: {ex.Message}", false);
                 Logger.Error($"HTTP listener has been disposed: {ex.Message}");
             }
             finally

@@ -9,10 +9,12 @@ using QQBotCodePlugin.utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Windows.Foundation.Collections;
 using Windows.Storage.Pickers;
 using Application = Microsoft.UI.Xaml.Application;
 using Exception = System.Exception;
@@ -123,9 +125,28 @@ namespace QQBotCodePlugin.view
             StackPanel s = new StackPanel() { Orientation = Orientation.Horizontal, Spacing = 5 };
             Button refresh = new Button() { Content = "刷新" };
             Button uploadBtn = new Button() { Content = "上传插件" };
+            // TODO
+            Button updateBtn = new Button() { Content = "更新插件" };
+            Button ltoken = new Button() { Content = "查看令牌" };
+            // FINISH
             refresh.Click += (s, e) =>
             {
                 RefreshPage();
+            };
+            ltoken.Click += (s, e) =>
+            {
+                Dictionary<string,string> tokens = LoadTokensFromFile();
+                List<string> strings = new List<string>();
+                if (tokens.Count == 0)
+                {
+                    dialog.show("你的Tokens(本地文件加载)", "null", null, null, "关闭", this.XamlRoot);
+                    return;
+                }
+                foreach (var token in tokens)
+                {
+                    strings.Add($"{token.Key} = {token.Value}");
+                }
+                dialog.show("你的Tokens(本地文件加载)", string.Join("\n", strings), null, null, "关闭", this.XamlRoot);
             };
             uploadBtn.Click += async (s, e) =>
             {
@@ -197,7 +218,7 @@ namespace QQBotCodePlugin.view
                         {
                             byte[] fileBytes = File.ReadAllBytes(path.Text);
                             string base64FileContent = Convert.ToBase64String(fileBytes);
-
+                            string Token = GenerateToken();
                             var jsonPayload = new
                             {
                                 filename = FileName.Text,
@@ -206,7 +227,8 @@ namespace QQBotCodePlugin.view
                                 author = author.Text,
                                 version = version.Text,
                                 dependencies = dependencies.Text,
-                                filecontent = base64FileContent
+                                filecontent = base64FileContent,
+                                token = Token
                             };
 
                             string json = JsonConvert.SerializeObject(jsonPayload);
@@ -216,7 +238,8 @@ namespace QQBotCodePlugin.view
 
                             if (response.IsSuccessStatusCode)
                             {
-                                this.dialog.show("成功", "成功上传文件", "好的", null, null, this.XamlRoot);
+                                SaveTokenToFile(PluginName.Text,Token);
+                                this.dialog.show("成功", $"成功上传文件\n更新令牌:{Token}\n请保存好此Token如丢失可以找1686388268找回", "好的", null, null, this.XamlRoot);
                                 RefreshPage();
                             }
                             else
@@ -234,12 +257,82 @@ namespace QQBotCodePlugin.view
 
             s.Children.Add(refresh);
             s.Children.Add(uploadBtn);
+            s.Children.Add(updateBtn);
+            s.Children.Add(ltoken);
             stackPanel.Children.Add(s);
             MainGrid.Children.Add(stackPanel);
             FillGridWithPlugins(responseText);
             return;
         }
 
+        private void SaveTokenToFile(string pluginName, string token)
+        {
+            string root = settingManager.GetValue<string>("QQBotPath");
+            string tokenFileName = ".token";
+            string tokenFilePath = Path.Combine(root, tokenFileName);
+
+            if (string.IsNullOrEmpty(root))
+            {
+                App.GetAppLogger().Log($"Error: QQBotPath is not set.", false);
+                throw new InvalidOperationException("QQBotPath is not set.");
+            }
+
+            if (!Directory.Exists(root))
+            {
+                Directory.CreateDirectory(root);
+            }
+
+            if (!File.Exists(tokenFilePath))
+            {
+                using (FileStream stream = new FileStream(tokenFilePath, FileMode.Create)) { }
+            }
+
+            string tokens = File.Exists(tokenFilePath) ? File.ReadAllText(tokenFilePath) : "{}";
+
+            Dictionary<string, string> tokenDict;
+            try
+            {
+                tokenDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(tokens);
+            }
+            catch (JsonException)
+            {
+                tokenDict = new Dictionary<string, string>();
+            }
+
+            if (tokenDict == null)
+            {
+                tokenDict = new Dictionary<string, string>();
+            }
+
+            tokenDict[pluginName] = token;
+
+            string updatedTokens = JsonConvert.SerializeObject(tokenDict, Formatting.Indented);
+
+            File.WriteAllText(tokenFilePath, updatedTokens);
+        }
+
+        private Dictionary<string, string> LoadTokensFromFile()
+        {
+            string root = settingManager.GetValue<string>("QQBotPath");
+            string tokenFileName = ".token";
+            string tokenFilePath = Path.Combine(root, tokenFileName);
+
+            if (!Directory.Exists(root))
+            {
+                Directory.CreateDirectory(root);
+            }
+
+            if (!File.Exists(tokenFilePath))
+            {
+                return new Dictionary<string, string>();
+            }
+
+            string tokens = File.ReadAllText(tokenFilePath);
+
+            var tokenDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(tokens);
+
+            return tokenDict ?? new Dictionary<string, string>();
+        }
 
         private void RefreshPage()
         {
@@ -255,6 +348,7 @@ namespace QQBotCodePlugin.view
 
                 if (pluginList == null || pluginList.Plugins == null)
                 {
+                    App.GetAppLogger().Log($"Error: Invalid JSON data.", false);
                     throw new Exception("Invalid JSON data.");
                 }
                 int itemsPerRow = 6;
@@ -409,11 +503,13 @@ namespace QQBotCodePlugin.view
                     }
                     catch (JsonException ex)
                     {
+                        App.GetAppLogger().Log($"Error: {ex.Message}", false);
                         dialog.show("错误", $"{ex.Message}", "好的", null, null, this.XamlRoot);
                         return;
                     }
                     catch (Exception ex)
                     {
+                        App.GetAppLogger().Log($"Error: {ex.Message}", false);
                         dialog.show("错误", $"{ex.Message}", "好的", null, null, this.XamlRoot);
                         return;
                     }
@@ -423,6 +519,11 @@ namespace QQBotCodePlugin.view
                     dialog.show("错误", "Failed to download file", "好的", null, null, this.XamlRoot);
                 }
             }
+        }
+
+        private string GenerateToken()
+        {
+            return Guid.NewGuid().ToString();
         }
     }
 

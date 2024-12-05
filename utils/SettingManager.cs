@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using PuppeteerSharp.Input;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -17,7 +19,7 @@ namespace QQBotCodePlugin.utils
                 { "HTTP","http://valley.skyman.cloud/" },
                 { "ChromePath",@"C:\Program Files\Google\Chrome\Application\chrome.exe" }
             };
-        private List<string> folders = new List<string>() { "Bots" };
+        private List<string> folders = new List<string>() { "Bots","logs" };
         private List<string> files = new List<string>();
 
         public SettingManager()
@@ -157,7 +159,7 @@ namespace QQBotCodePlugin.utils
                     }
                     catch (Exception ex)
                     {
-                        Debug.WriteLine($"Conversion error: {ex.Message}");
+                        App.GetAppLogger().Log($"Error: {ex.Message}", false);
                         return default(T);
                     }
                 }

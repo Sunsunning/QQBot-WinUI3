@@ -50,11 +50,13 @@ namespace QQBotCodePlugin.QQBot.utils.QQ
             }
             catch (HttpRequestException e)
             {
+                App.GetAppLogger().Log($"Error: {e.Message}", false);
                 logger.Error($"请求发生错误: {e.Message}");
                 return null;
             }
             catch (Exception e) when (e is not HttpRequestException)
             {
+                App.GetAppLogger().Log($"Error: {e.Message}", false);
                 logger.Error($"请求发生未知错误: {e.Message}");
                 return null;
             }

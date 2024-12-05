@@ -30,6 +30,7 @@ namespace QQBotCodePlugin.QQBot.utils.wife
             }
             catch (IOException ex)
             {
+                App.GetAppLogger().Log($"Error: {ex.Message}", false);
                 logger.Error($"Error reading file: {ex.Message}");
             }
         }

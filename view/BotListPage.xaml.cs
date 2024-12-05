@@ -61,12 +61,13 @@ namespace QQBotCodePlugin.view
             }
             catch (IOException ex)
             {
-                Debug.WriteLine(ex.Message);
+                App.GetAppLogger().Log($"Error: {ex.Message}", false);
                 _dialog.show("错误", $"{ex.Message}", "好的", null, null, this.XamlRoot);
                 return;
             }
             catch (Exception ex)
             {
+                App.GetAppLogger().Log($"Error: {ex.Message}", false);
                 _dialog.show("错误", $"{ex.Message}", "好的", null, null, this.XamlRoot);
                 return;
             }

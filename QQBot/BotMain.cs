@@ -7,6 +7,7 @@ using QQBotCodePlugin.utils;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QQBotCodePlugin.QQBot
 {
@@ -30,6 +31,7 @@ namespace QQBotCodePlugin.QQBot
 
         public async void ReStart()
         {
+            App.GetAppLogger().Log($"正在重新启动机器人{info.BotName}", false);
             logger.Info($"正在重新启动机器人{info.BotName}");
             bot.Stop();
             await RunBot();
@@ -38,6 +40,7 @@ namespace QQBotCodePlugin.QQBot
 
         public void StopBot()
         {
+            App.GetAppLogger().Log($"机器人正在关闭");
             logger.Info("正在关闭");
             bot.Stop();
         }
