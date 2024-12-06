@@ -1,3 +1,5 @@
+using ABI.Windows.UI;
+using Microsoft.UI;
 using Microsoft.UI.Text;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -8,16 +10,17 @@ using Newtonsoft.Json.Linq;
 using QQBotCodePlugin.utils;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Windows.Foundation.Collections;
+using Windows.ApplicationModel.Email;
 using Windows.Storage.Pickers;
 using Application = Microsoft.UI.Xaml.Application;
 using Exception = System.Exception;
+using Path = System.IO.Path;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -36,6 +39,8 @@ namespace QQBotCodePlugin.view
         private readonly string get;
         private readonly string upload;
         private readonly string download;
+        private readonly string get_file_by_token;
+        private readonly string update;
 
 
         public PluginStorePage()
@@ -48,6 +53,8 @@ namespace QQBotCodePlugin.view
             get = $"{http}get_plugins";
             upload = $"{http}upload";
             download = $"{http}download";
+            update = $"{http}update";
+            get_file_by_token = $"{http}get_file_by_token";
             Bots = getBots();
             InitializePage();
             TransitionCollection transitions = new TransitionCollection();
@@ -100,7 +107,6 @@ namespace QQBotCodePlugin.view
                     }
                 }
             }
-            return (null, false);
         }
 
         private async Task InitializePage()
@@ -125,14 +131,13 @@ namespace QQBotCodePlugin.view
             StackPanel s = new StackPanel() { Orientation = Orientation.Horizontal, Spacing = 5 };
             Button refresh = new Button() { Content = "刷新" };
             Button uploadBtn = new Button() { Content = "上传插件" };
-            // TODO
             Button updateBtn = new Button() { Content = "更新插件" };
             Button ltoken = new Button() { Content = "查看令牌" };
-            // FINISH
             refresh.Click += (s, e) =>
             {
                 RefreshPage();
             };
+            updateBtn.Click += UpdateBtn_Click;
             ltoken.Click += (s, e) =>
             {
                 Dictionary<string,string> tokens = LoadTokensFromFile();
@@ -148,112 +153,7 @@ namespace QQBotCodePlugin.view
                 }
                 dialog.show("你的Tokens(本地文件加载)", string.Join("\n", strings), null, null, "关闭", this.XamlRoot);
             };
-            uploadBtn.Click += async (s, e) =>
-            {
-                StackPanel stack = new StackPanel();
-                TextBox FileName = new TextBox() { Header = "文件名" };
-                TextBox PluginName = new TextBox() { Header = "插件名" };
-                TextBox version = new TextBox() { Header = "版本号" };
-                TextBox author = new TextBox() { Header = "作者" };
-                TextBox description = new TextBox() { Header = "描述" };
-                TextBox dependencies = new TextBox() { Header = "依赖" };
-                TextBox path = new TextBox() { Header = "路径", IsReadOnly = true };
-                Button file = new Button() { Content = "选择文件", HorizontalAlignment = HorizontalAlignment.Stretch, Margin = new Thickness(0, 5, 0, 0) };
-                file.Click += (s, e) =>
-                {
-                    async Task OpenFileAsync()
-                    {
-                        var openPicker = new FileOpenPicker();
-                        var window = App.GetMainWindow();
-                        var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(window);
-                        WinRT.Interop.InitializeWithWindow.Initialize(openPicker, hWnd);
-                        openPicker.ViewMode = PickerViewMode.Thumbnail;
-                        openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
-                        openPicker.FileTypeFilter.Add(".dll");
-
-                        var file = await openPicker.PickSingleFileAsync();
-                        if (file != null)
-                        {
-                            path.Text = file.Path;
-                        }
-                    };
-                    OpenFileAsync();
-                };
-
-                stack.Children.Add(FileName);
-                stack.Children.Add(PluginName);
-                stack.Children.Add(version);
-                stack.Children.Add(author);
-                stack.Children.Add(description);
-                stack.Children.Add(dependencies);
-                stack.Children.Add(path);
-                stack.Children.Add(file);
-                ScrollViewer scrollViewer = new ScrollViewer
-                {
-                    VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
-                    HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled,
-                    Content = stack
-                };
-
-                ContentDialog dialog = new ContentDialog
-                {
-                    Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
-                    Title = "上传插件",
-                    PrimaryButtonText = "上传",
-                    CloseButtonText = "取消",
-                    DefaultButton = ContentDialogButton.Primary,
-                    Content = scrollViewer,
-                    XamlRoot = this.XamlRoot
-                };
-                dialog.PrimaryButtonClick += (s, e) =>
-                {
-                    async Task sendRequest()
-                    {
-                        if (string.IsNullOrEmpty(path.Text) || string.IsNullOrEmpty(FileName.Text) || string.IsNullOrEmpty(PluginName.Text) || string.IsNullOrEmpty(version.Text) || string.IsNullOrEmpty(author.Text) || string.IsNullOrEmpty(description.Text) || string.IsNullOrEmpty(dependencies.Text))
-                        {
-                            e.Cancel = true;
-                            return;
-                        }
-                        using (HttpClient client = new HttpClient())
-                        {
-                            byte[] fileBytes = File.ReadAllBytes(path.Text);
-                            string base64FileContent = Convert.ToBase64String(fileBytes);
-                            string Token = GenerateToken();
-                            var jsonPayload = new
-                            {
-                                filename = FileName.Text,
-                                pluginname = PluginName.Text,
-                                description = description.Text,
-                                author = author.Text,
-                                version = version.Text,
-                                dependencies = dependencies.Text,
-                                filecontent = base64FileContent,
-                                token = Token
-                            };
-
-                            string json = JsonConvert.SerializeObject(jsonPayload);
-
-                            var content = new StringContent(json, Encoding.UTF8, "application/json");
-                            var response = await client.PostAsync(upload, content);
-
-                            if (response.IsSuccessStatusCode)
-                            {
-                                SaveTokenToFile(PluginName.Text,Token);
-                                this.dialog.show("成功", $"成功上传文件\n更新令牌:{Token}\n请保存好此Token如丢失可以找1686388268找回", "好的", null, null, this.XamlRoot);
-                                RefreshPage();
-                            }
-                            else
-                            {
-                                this.dialog.show("寄", "上传文件失败", "好的", null, null, this.XamlRoot);
-                            }
-                        }
-                        e.Cancel = false;
-                    }
-                    sendRequest();
-                };
-
-                await dialog.ShowAsync();
-            };
+            uploadBtn.Click += uploadButton_Click;
 
             s.Children.Add(refresh);
             s.Children.Add(uploadBtn);
@@ -263,6 +163,264 @@ namespace QQBotCodePlugin.view
             MainGrid.Children.Add(stackPanel);
             FillGridWithPlugins(responseText);
             return;
+        }
+
+        private async void UpdateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string? filePath = null;
+            StackPanel mainPanel = new StackPanel();
+
+            StackPanel stack = new StackPanel();
+            TextBlock error = new TextBlock() {Visibility = Visibility.Collapsed};
+            TextBox token = new TextBox() { Header = "输入你的Token" };
+            TextBlock FileName = new TextBlock();
+            Button search = new Button() { Content = "查询此Token对应的文件", HorizontalAlignment = HorizontalAlignment.Stretch };
+            Button file = new Button() { Content = "选择文件", HorizontalAlignment = HorizontalAlignment.Stretch };
+            stack.Children.Add(error);
+            stack.Children.Add(FileName);
+            stack.Children.Add(token);
+            stack.Children.Add(search);
+            stack.Children.Add(file);
+
+            StackPanel loadPanel = new StackPanel() { Visibility = Visibility.Collapsed };
+            ProgressRing progressRing = new ProgressRing() { IsActive = true };
+            TextBlock loadingText = new TextBlock() { Text = "正在查询中……" };
+            loadPanel.Children.Add (progressRing);
+            loadPanel.Children.Add (loadingText);
+
+            mainPanel.Children.Add(stack);
+            mainPanel.Children.Add(loadPanel);
+
+            search.Click +=(s,e)=>{
+                async Task GetFileByToken()
+                {
+                    stack.Visibility = Visibility.Collapsed;
+                    loadPanel.Visibility = Visibility.Visible;
+
+                    if (string.IsNullOrEmpty(token.Text))
+                    {
+                        error.Text = "Token值未填写!";
+                        error.Visibility = Visibility.Visible;
+                        stack.Visibility = Visibility.Visible;
+                        loadPanel.Visibility = Visibility.Collapsed;
+                        return;
+                    }
+                    using (HttpClient client = new HttpClient())
+                    {
+                        var jsonPayload = new
+                        {
+                            token = token.Text
+                        };
+
+                        string json = JsonConvert.SerializeObject(jsonPayload);
+
+                        var content = new StringContent(json, Encoding.UTF8, "application/json");
+                        var response = await client.PostAsync(get_file_by_token, content);
+
+                        if (!response.IsSuccessStatusCode)
+                        {
+                            error.Text = "无法获取Token对应的文件";
+                            error.Visibility = Visibility.Visible;
+                        }
+                        else
+                        {
+                            FileName.Text = $"查询到的文件:{await response.Content.ReadAsStringAsync()}";
+                        }
+                        stack.Visibility = Visibility.Visible;
+                        loadPanel.Visibility = Visibility.Collapsed;
+                    }
+                }
+                GetFileByToken();
+            };
+
+            file.Click += (s, e) =>
+            {
+                async Task OpenFileAsync()
+                {
+                    var openPicker = new FileOpenPicker();
+                    var window = App.GetMainWindow();
+                    var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(window);
+                    WinRT.Interop.InitializeWithWindow.Initialize(openPicker, hWnd);
+                    openPicker.ViewMode = PickerViewMode.Thumbnail;
+                    openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+                    openPicker.FileTypeFilter.Add(".dll");
+
+                    var file = await openPicker.PickSingleFileAsync();
+                    if (file != null)
+                    {
+                        filePath = file.Path;
+                    }
+                };
+                OpenFileAsync();
+            };
+
+            ScrollViewer scrollViewer = new ScrollViewer
+            {
+                VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled,
+                Content = mainPanel
+            };
+
+            ContentDialog dialog = new ContentDialog
+            {
+                Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
+                Title = "更新插件",
+                PrimaryButtonText = "上传",
+                CloseButtonText = "取消",
+                DefaultButton = ContentDialogButton.Primary,
+                Content = scrollViewer,
+                XamlRoot = this.XamlRoot
+            };
+
+            dialog.PrimaryButtonClick += (s, e) =>
+            {
+                async Task sendRequest()
+                {
+                    if (string.IsNullOrEmpty(filePath) || string.IsNullOrEmpty(FileName.Text))
+                    {
+                        error.Text = "请填写完所有值";
+                        error.Visibility = Visibility.Visible;
+                        e.Cancel = true;
+                        return;
+                    }
+                    using (HttpClient client = new HttpClient())
+                    {
+                        byte[] fileBytes = File.ReadAllBytes(filePath);
+                        string base64FileContent = Convert.ToBase64String(fileBytes);
+                        var jsonPayload = new
+                        {
+                            filecontent = fileBytes,
+                            filename = FileName.Text
+                        };
+
+                        string json = JsonConvert.SerializeObject(jsonPayload);
+
+                        var content = new StringContent(json, Encoding.UTF8, "application/json");
+                        var response = await client.PostAsync(update, content);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            this.dialog.show("成功", "成功更新插件！", "好的", null,null,this.XamlRoot);
+                        }
+                        else
+                        {
+                            this.dialog.show("寄", "上传文件失败", "好的", null, null, this.XamlRoot);
+                        }
+                    }
+                    e.Cancel = false;
+                }
+                sendRequest();
+            };
+
+            await dialog.ShowAsync();
+
+        }
+
+        private async void uploadButton_Click(object sender,RoutedEventArgs args)
+        {
+            StackPanel stack = new StackPanel();
+            TextBox FileName = new TextBox() { Header = "文件名" };
+            TextBox PluginName = new TextBox() { Header = "插件名" };
+            TextBox version = new TextBox() { Header = "版本号" };
+            TextBox author = new TextBox() { Header = "作者" };
+            TextBox description = new TextBox() { Header = "描述" };
+            TextBox dependencies = new TextBox() { Header = "依赖" };
+            TextBox path = new TextBox() { Header = "路径", IsReadOnly = true };
+            Button file = new Button() { Content = "选择文件", HorizontalAlignment = HorizontalAlignment.Stretch, Margin = new Thickness(0, 5, 0, 0) };
+            file.Click += (s, e) =>
+            {
+                async Task OpenFileAsync()
+                {
+                    var openPicker = new FileOpenPicker();
+                    var window = App.GetMainWindow();
+                    var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(window);
+                    WinRT.Interop.InitializeWithWindow.Initialize(openPicker, hWnd);
+                    openPicker.ViewMode = PickerViewMode.Thumbnail;
+                    openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+                    openPicker.FileTypeFilter.Add(".dll");
+
+                    var file = await openPicker.PickSingleFileAsync();
+                    if (file != null)
+                    {
+                        path.Text = file.Path;
+                    }
+                };
+                OpenFileAsync();
+            };
+
+            stack.Children.Add(FileName);
+            stack.Children.Add(PluginName);
+            stack.Children.Add(version);
+            stack.Children.Add(author);
+            stack.Children.Add(description);
+            stack.Children.Add(dependencies);
+            stack.Children.Add(path);
+            stack.Children.Add(file);
+            ScrollViewer scrollViewer = new ScrollViewer
+            {
+                VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled,
+                Content = stack
+            };
+
+            ContentDialog dialog = new ContentDialog
+            {
+                Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
+                Title = "上传插件",
+                PrimaryButtonText = "上传",
+                CloseButtonText = "取消",
+                DefaultButton = ContentDialogButton.Primary,
+                Content = scrollViewer,
+                XamlRoot = this.XamlRoot
+            };
+            dialog.PrimaryButtonClick += (s, e) =>
+            {
+                async Task sendRequest()
+                {
+                    if (string.IsNullOrEmpty(path.Text) || string.IsNullOrEmpty(FileName.Text) || string.IsNullOrEmpty(PluginName.Text) || string.IsNullOrEmpty(version.Text) || string.IsNullOrEmpty(author.Text) || string.IsNullOrEmpty(description.Text) || string.IsNullOrEmpty(dependencies.Text))
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
+                    using (HttpClient client = new HttpClient())
+                    {
+                        byte[] fileBytes = File.ReadAllBytes(path.Text);
+                        string base64FileContent = Convert.ToBase64String(fileBytes);
+                        string Token = GenerateToken();
+                        var jsonPayload = new
+                        {
+                            filename = FileName.Text,
+                            pluginname = PluginName.Text,
+                            description = description.Text,
+                            author = author.Text,
+                            version = version.Text,
+                            dependencies = dependencies.Text,
+                            filecontent = base64FileContent,
+                            token = Token
+                        };
+
+                        string json = JsonConvert.SerializeObject(jsonPayload);
+
+                        var content = new StringContent(json, Encoding.UTF8, "application/json");
+                        var response = await client.PostAsync(upload, content);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            SaveTokenToFile(PluginName.Text, Token);
+                            this.dialog.show("成功", $"成功上传文件\n更新令牌:{Token}\n请保存好此Token如丢失可以找1686388268找回", "好的", null, null, this.XamlRoot);
+                            RefreshPage();
+                        }
+                        else
+                        {
+                            this.dialog.show("寄", "上传文件失败", "好的", null, null, this.XamlRoot);
+                        }
+                    }
+                    e.Cancel = false;
+                }
+                sendRequest();
+            };
+
+            await dialog.ShowAsync();
         }
 
         private void SaveTokenToFile(string pluginName, string token)
