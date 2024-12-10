@@ -34,6 +34,7 @@ namespace QQBotCodePlugin.QQBot.abilities.AI
             List<string> description = bot.helpCommandHelper.getCommands("AI类");
             description.Add("/model - 切换模型,查看模型列表请输入/model查看");
             description.Add("/model current - 查看当前使用的模型");
+            description.Add("#清空历史对话 - 清空该群/私聊的历史对话");
             description.Add("使用 #+文本 来进行AI聊天");
             bot.helpCommandHelper.addCommands("AI类", description);
             bot.getLogger().Info($"{ToString()}注册完成");

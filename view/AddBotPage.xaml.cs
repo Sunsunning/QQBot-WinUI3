@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using QQBotCodePlugin.utils;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -19,56 +20,39 @@ namespace QQBotCodePlugin.view
     {
         private SettingManager settingManager;
         private Dialog _dialog;
+        private readonly List<CheckBox> checkBoxList;
 
         public AddBotPage()
         {
             this.InitializeComponent();
             settingManager = new SettingManager();
             _dialog = new Dialog();
+            checkBoxList = new List<CheckBox>
+            {
+                    Plugin, ba, cat, dragon, eat, play, AIChat, AIChatPrivate, Help, KudosMe, NumberBoom, onset, ping, RunWindowsCommand, Sky, wife
+            };
         }
 
         private void OptionsAllCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            AIChatPrivate.IsChecked = Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = wife.IsChecked = true;
+            foreach (var checkBox in checkBoxList)
+            {
+                checkBox.IsChecked = true;
+            }
         }
 
         private void OptionsAllCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            AIChatPrivate.IsChecked = Plugin.IsChecked = ba.IsChecked = cat.IsChecked = dragon.IsChecked = eat.IsChecked = play.IsChecked = AIChat.IsChecked = Help.IsChecked = KudosMe.IsChecked = NumberBoom.IsChecked = onset.IsChecked = ping.IsChecked = RunWindowsCommand.IsChecked = Sky.IsChecked = wife.IsChecked = false;
+            foreach (var checkBox in checkBoxList)
+            {
+                checkBox.IsChecked = false;
+            }
         }
 
         private void AreAllAbilitiesSelected()
         {
-            int checkedCount = 0;
-            if (Plugin.IsChecked == true) checkedCount++;
-            if (ba.IsChecked == true) checkedCount++;
-            if (cat.IsChecked == true) checkedCount++;
-            if (dragon.IsChecked == true) checkedCount++;
-            if (eat.IsChecked == true) checkedCount++;
-            if (play.IsChecked == true) checkedCount++;
-            if (AIChat.IsChecked == true) checkedCount++;
-            if (AIChatPrivate.IsChecked == true) checkedCount++;
-            if (Help.IsChecked == true) checkedCount++;
-            if (KudosMe.IsChecked == true) checkedCount++;
-            if (NumberBoom.IsChecked == true) checkedCount++;
-            if (onset.IsChecked == true) checkedCount++;
-            if (ping.IsChecked == true) checkedCount++;
-            if (RunWindowsCommand.IsChecked == true) checkedCount++;
-            if (Sky.IsChecked == true) checkedCount++;
-            if (wife.IsChecked == true) checkedCount++;
-
-            if (checkedCount == 16)
-            {
-                OptionsAllCheckBox.IsChecked = true;
-            }
-            else if (checkedCount == 0)
-            {
-                OptionsAllCheckBox.IsChecked = false;
-            }
-            else
-            {
-                OptionsAllCheckBox.IsChecked = null;
-            }
+            bool allChecked = checkBoxList.All(checkBox => checkBox.IsChecked == true);
+            OptionsAllCheckBox.IsChecked = allChecked ? true : (bool?)null;
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
